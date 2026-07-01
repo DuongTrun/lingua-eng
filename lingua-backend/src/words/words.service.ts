@@ -61,7 +61,9 @@ export class WordsService {
     level?: string;
     topic?: string;
     search?: string;
+    beautyMode?: string;
   }) {
+
     // Clamp giá trị page và limit để đảm bảo an toàn
     const page = Math.max(1, Number(query.page) || 1);
     const limit = Math.min(100, Math.max(1, Number(query.limit) || 20));

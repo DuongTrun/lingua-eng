@@ -48,6 +48,26 @@ const BEAUTY_GRAMMARS: GrammarStructure[] = [
     exampleTranslation: "Vui lòng giữ cho mi nối của chị không dính nước trong 24 giờ đầu để keo khô hoàn toàn nhé.",
     category: "Lashes"
   },
+  {
+    id: "g9",
+    pattern: "If you feel any stinging or burning, please let me know immediately.",
+    vietnameseMeaning: "Nếu chị cảm thấy bị cay hay rát mắt, vui lòng báo cho em biết ngay nhé.",
+    usageContext: "Nhắc nhở khách báo ngay khi bị cay mắt do hơi keo khi đang nối mi.",
+    exampleStyle: "If you feel any stinging or burning during the process, please let me know immediately.",
+    exampleResponse: "Actually, it's burning a little bit right now in my left eye.",
+    exampleTranslation: "Nếu chị cảm thấy bị cay hay rát mắt trong quá trình nối, vui lòng bảo em ngay nhé.",
+    category: "Lashes"
+  },
+  {
+    id: "g10",
+    pattern: "Do you prefer a cat-eye look or a doll-eye look?",
+    vietnameseMeaning: "Chị thích dáng mi mắt mèo (dài ở đuôi) hay dáng mắt búp bê (dài ở giữa) ạ?",
+    usageContext: "Hỏi khách về phong cách dáng mi (mapping) yêu thích.",
+    exampleStyle: "Do you prefer a cat-eye look to wing out your eyes, or a doll-eye look to make them look rounder?",
+    exampleResponse: "I'd like a cat-eye look, please. I like it a bit dramatic.",
+    exampleTranslation: "Chị thích dáng mi mắt mèo để kéo dài mắt ra, hay dáng mắt búp bê để mắt trông tròn hơn?",
+    category: "Lashes"
+  },
   // Nối tóc - Hair
   {
     id: "g4",
@@ -79,6 +99,26 @@ const BEAUTY_GRAMMARS: GrammarStructure[] = [
     exampleTranslation: "Chị cảm thấy độ căng trên da đầu thế nào ạ? Có bị chặt quá không?",
     category: "Hair"
   },
+  {
+    id: "g11",
+    pattern: "How many inches of length are you looking to add today?",
+    vietnameseMeaning: "Hôm nay chị muốn nối dài thêm khoảng bao nhiêu inch ạ?",
+    usageContext: "Xác định độ dài tóc nối mà khách mong muốn (ví dụ: 18 inches, 22 inches).",
+    exampleStyle: "How many inches of length are you looking to add today? We have eighteen, twenty, and twenty-four inches.",
+    exampleResponse: "I think twenty inches would be perfect for me.",
+    exampleTranslation: "Hôm nay chị muốn nối dài thêm khoảng bao nhiêu inch ạ? Chúng em có loại 18, 20 và 24 inch.",
+    category: "Hair"
+  },
+  {
+    id: "g12",
+    pattern: "We should do a color match to see which extension shade blends best with your hair.",
+    vietnameseMeaning: "Chúng ta nên so tông màu để xem mã màu tóc nối nào tiệp nhất với tóc thật của chị.",
+    usageContext: "So màu tóc của khách và tóc nối trước khi thực hiện.",
+    exampleStyle: "We should do a color match first to see which extension shade blends best with your natural hair.",
+    exampleResponse: "Yes, please. My ends are a bit lighter than my roots.",
+    exampleTranslation: "Chúng ta nên so tông màu trước để xem mã màu tóc nối nào tiệp nhất với tóc thật của chị.",
+    category: "Hair"
+  },
   // Thanh toán & Chăm sóc khách - Checkout & Small Talk
   {
     id: "g7",
@@ -99,8 +139,29 @@ const BEAUTY_GRAMMARS: GrammarStructure[] = [
     exampleResponse: "Yes, please. Let's schedule it for next Friday.",
     exampleTranslation: "Chị có muốn đặt lịch dặm mi lần tới sau hai tuần nữa luôn để mi luôn đẹp không?",
     category: "Checkout"
+  },
+  {
+    id: "g13",
+    pattern: "How did you like your service today? Is there anything you'd like to adjust?",
+    vietnameseMeaning: "Chị cảm thấy dịch vụ hôm nay thế nào ạ? Có phần nào chị muốn chỉnh sửa lại không?",
+    usageContext: "Hỏi phản hồi của khách hàng sau khi hoàn thành dịch vụ làm đẹp.",
+    exampleStyle: "How did you like your service today? Is there anything you'd like to adjust before you leave?",
+    exampleResponse: "I love it! The length is absolutely perfect.",
+    exampleTranslation: "Chị cảm thấy dịch vụ hôm nay thế nào ạ? Có phần nào chị muốn chỉnh sửa lại trước khi về không?",
+    category: "Checkout"
+  },
+  {
+    id: "g14",
+    pattern: "Are you planning anything special for the upcoming holiday?",
+    vietnameseMeaning: "Chị có kế hoạch gì đặc biệt cho kỳ nghỉ sắp tới không?",
+    usageContext: "Trò chuyện xã giao thân mật (Small Talk) để tạo không khí thoải mái cho khách.",
+    exampleStyle: "Are you planning anything special for the upcoming holiday? Any traveling?",
+    exampleResponse: "We're going to visit family in Florida for a week.",
+    exampleTranslation: "Chị có kế hoạch gì đặc biệt cho kỳ nghỉ sắp tới không? Có đi du lịch đâu không ạ?",
+    category: "Checkout"
   }
 ];
+
 
 export default function GrammarPage() {
   const router = useRouter();

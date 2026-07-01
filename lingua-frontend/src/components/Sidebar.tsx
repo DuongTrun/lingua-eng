@@ -128,10 +128,11 @@ export default function Sidebar({ activeItem, showMobileHeader = true }: Sidebar
       )}
 
       {/* 🚪 Sidebar Menu Panel (Dạng Drawer trên mobile, dạng Sidebar đứng cố định trên desktop) */}
-      <aside className={`bg-surface border-r border-outline-variant/30 flex flex-col justify-between p-6 z-50 fixed inset-y-0 left-0 w-72 transform transition-transform duration-300 ease-in-out md:translate-x-0 md:w-sidebar-width md:h-screen md:fixed md:left-0 md:top-0
+      <aside className={`bg-surface border-r border-outline-variant/30 flex flex-col justify-between p-6 z-50 fixed inset-y-0 left-0 w-72 transform transition-transform duration-300 ease-in-out md:translate-x-0 md:w-sidebar-width md:h-screen md:fixed md:left-0 md:top-0 overflow-y-auto max-h-screen
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}>
-        <div className="space-y-6">
+        <div className="space-y-6 flex-1 flex flex-col justify-start">
+
           {/* Logo & Close Button */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-headline-md font-extrabold text-primary select-none text-xl">

@@ -1,0 +1,502 @@
+[
+  {
+    "word": "trim",
+    "ipa": "/trɪm/",
+    "meaning": "tỉa tóc — cắt tỉa đi một chút (thường là phần ngọn tóc hư/chẻ ngọn)",
+    "example": "I just want a light trim to get rid of my split ends.",
+    "exampleMeaning": "Tôi chỉ muốn tỉa nhẹ một chút để loại bỏ phần tóc chẻ ngọn thôi.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "word": "blowout",
+    "ipa": "/ˈbloʊaʊt/",
+    "meaning": "gội sấy tạo kiểu bồng bềnh — dịch vụ sấy tóc tạo phồng bằng lược tròn",
+    "example": "I have a party tonight, so I'd like a wash and a blowout.",
+    "exampleMeaning": "Tối nay em có tiệc nên muốn gội đầu và sấy tạo kiểu bồng bềnh.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "split ends",
+    "ipa": "/splɪt ɛndz/",
+    "meaning": "tóc chẻ ngọn — phần ngọn tóc khô xơ bị tách làm đôi",
+    "example": "Your hair is very long, but you have a lot of split ends.",
+    "exampleMeaning": "Tóc chị dài lắm nhưng ngọn tóc bị chẻ ngọn nhiều quá.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "highlights",
+    "ipa": "/ˈhaɪlaɪts/",
+    "meaning": "nhuộm highlight — kỹ thuật nhuộm những lọn tóc sáng màu hơn nền tóc",
+    "example": "Adding some blonde highlights will make your hair look thicker.",
+    "exampleMeaning": "Nhuộm thêm vài lọn highlight màu vàng sáng sẽ giúp tóc chị trông dày hơn.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "balayage",
+    "ipa": "/ˌbæleɪˈjɑːʒ/",
+    "meaning": "kỹ thuật nhuộm balayage — nhuộm loang màu tự nhiên từ tối ở chân tóc sang sáng ở ngọn",
+    "example": "Balayage is popular because it grows out naturally without harsh lines.",
+    "exampleMeaning": "Nhuộm loang màu balayage rất thịnh vì khi chân tóc mọc ra nhìn vẫn tự nhiên, không lộ vạch màu.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "bleach",
+    "ipa": "/bliːʧ/",
+    "meaning": "tẩy tóc — dùng hóa chất khử hạt màu tự nhiên của tóc để nhuộm màu sáng",
+    "example": "We need to bleach your hair twice to get it light enough for silver gray.",
+    "exampleMeaning": "Chúng ta cần tẩy tóc hai lần để tóc đủ sáng mới nhuộm được màu xám khói ạ.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "word": "hair dye",
+    "ipa": "/hɛr daɪ/",
+    "meaning": "thuốc nhuộm tóc / màu nhuộm",
+    "example": "Do you use permanent or semi-permanent hair dye?",
+    "exampleMeaning": "Chị muốn dùng thuốc nhuộm bền lâu hay loại nhuộm tạm thời mau phai ạ?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "root touch-up",
+    "ipa": "/ruːt ˈtʌʧ-ʌp/",
+    "meaning": "nhuộm dặm chân tóc — nhuộm phần tóc mới mọc ở sát da đầu cho đều màu",
+    "example": "I need a root touch-up because my gray hair is starting to show.",
+    "exampleMeaning": "Tôi cần nhuộm dặm chân tóc vì tóc bạc bắt đầu lộ ra rồi.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "toner",
+    "ipa": "/ˈtoʊnər/",
+    "meaning": "nước bóng khử vàng / toner — sản phẩm trung hòa ánh vàng đỏ sau khi tẩy tóc",
+    "example": "We should apply a toner to get rid of the brassy yellow tones.",
+    "exampleMeaning": "Chúng ta nên đi toner để khử bớt những ánh vàng xỉn đỏ trên tóc nhé.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "deep conditioning",
+    "ipa": "/diːp kənˈdɪʃənɪŋ/",
+    "meaning": "hấp dầu / dưỡng ẩm sâu — ủ dầu dưỡng sâu giúp tóc phục hồi hư tổn",
+    "example": "Your hair is a bit dry; would you like a deep conditioning treatment today?",
+    "exampleMeaning": "Tóc chị hơi khô, hôm nay chị có muốn làm gói hấp dầu phục hồi sâu không ạ?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "scalp massage",
+    "ipa": "/skælp məˈsɑːʒ/",
+    "meaning": "massage da đầu — cào nhẹ và mát-xa đầu khi gội giúp khách thư giãn",
+    "example": "All of our wash services include a relaxing scalp massage.",
+    "exampleMeaning": "Tất cả các dịch vụ gội đầu bên em đều bao gồm massage da đầu thư giãn.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "bangs",
+    "ipa": "/bæŋz/",
+    "meaning": "tóc mái (Anh-Anh gọi là fringe)",
+    "example": "Should we trim your bangs or let them grow out?",
+    "exampleMeaning": "Mình nên cắt tỉa lại tóc mái cho chị hay cứ để dài ra ạ?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "bob cut",
+    "ipa": "/bɑːb kʌt/",
+    "meaning": "kiểu tóc tém bob — tóc cắt ngắn ngang cằm hoặc vai",
+    "example": "She decided to get a chic bob cut for the summer.",
+    "exampleMeaning": "Cô ấy quyết định cắt kiểu tóc bob cá tính cho mùa hè.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "pixie cut",
+    "ipa": "/ˈpɪksi kʌt/",
+    "meaning": "kiểu tóc tém pixie — tóc cắt siêu ngắn sát da đầu đầy cá tính",
+    "example": "A pixie cut really highlights your facial features.",
+    "exampleMeaning": "Mái tóc tém pixie thực sự giúp làm nổi bật các đường nét khuôn mặt chị.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "layers",
+    "ipa": "/ˈleɪərz/",
+    "meaning": "tóc tỉa tầng layer — kỹ thuật cắt so le tạo độ phồng và tự nhiên cho tóc",
+    "example": "Adding some long layers will give your hair more movement.",
+    "exampleMeaning": "Cắt thêm vài tầng layer dáng dài sẽ giúp mái tóc chị trông bồng bềnh uyển chuyển hơn.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "perm",
+    "ipa": "/pɜːrm/",
+    "meaning": "uốn tóc xoăn (permanent wave) — dùng hóa chất uốn tóc xoăn giữ lâu",
+    "example": "Are we doing tight curls or loose waves for your perm?",
+    "exampleMeaning": "Mình muốn uốn xoăn tít hay sóng lơi tự nhiên cho mái tóc uốn của chị ạ?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "keratin treatment",
+    "ipa": "/ˈkɛrətɪn ˈtriːtmənt/",
+    "meaning": "phục hồi keratin — liệu pháp duỗi mượt và phủ bóng phục hồi tóc xơ rối",
+    "example": "A keratin treatment will keep your hair frizz-free for months.",
+    "exampleMeaning": "Phục hồi keratin sẽ giúp tóc chị mượt mà, không bị xơ rối trong vài tháng liền.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "shampoo",
+    "ipa": "/ʃæmˈpuː/",
+    "meaning": "dầu gội / gội đầu",
+    "example": "I will shampoo your hair twice to make sure it's completely clean.",
+    "exampleMeaning": "Em sẽ gội đầu cho chị hai lần bằng dầu gội để đảm bảo tóc thật sạch nhé.",
+    "level": "A1",
+    "topic": "Beauty",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "word": "conditioner",
+    "ipa": "/kənˈdɪʃənər/",
+    "meaning": "dầu xả tóc",
+    "example": "Only apply conditioner to the ends, not the roots.",
+    "exampleMeaning": "Chỉ thoa dầu xả vào phần ngọn tóc thôi chị nhé, đừng bôi vào chân tóc.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "hairspray",
+    "ipa": "/ˈhɛrspreɪ/",
+    "meaning": "keo xịt giữ nếp tóc",
+    "example": "Let me spray some hairspray to lock the curls in place.",
+    "exampleMeaning": "Để em xịt một ít keo xịt tóc để giữ cho các lọn xoăn không bị nhả nếp.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "flat iron",
+    "ipa": "/flæt ˈaɪərn/",
+    "meaning": "máy duỗi thẳng tóc (kẹp là tóc)",
+    "example": "I'll use a flat iron to give you a sleek, straight look.",
+    "exampleMeaning": "Em sẽ dùng máy duỗi để tạo cho chị mái tóc thẳng mượt và bóng bẩy.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "curling iron",
+    "ipa": "/ˈkɜːrlɪŋ ˈaɪərn/",
+    "meaning": "máy uốn xoăn tóc (cây uốn tóc)",
+    "example": "Watch out, the curling iron is extremely hot.",
+    "exampleMeaning": "Coi chừng nhé chị, cây uốn tóc này đang nóng lắm đấy ạ.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "hairdryer",
+    "ipa": "/ˈhɛrˌdraɪər/",
+    "meaning": "máy sấy tóc",
+    "example": "Could you pass me the hairdryer over there?",
+    "exampleMeaning": "Chị đưa giùm em cái máy sấy ở đằng kia với ạ?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "detangle",
+    "ipa": "/diːˈtæŋɡl/",
+    "meaning": "gỡ rối tóc — dùng lược tháo gỡ phần tóc rối",
+    "example": "Let me gently detangle your hair from the bottom up.",
+    "exampleMeaning": "Để em nhẹ nhàng gỡ rối tóc cho chị từ dưới ngọn lên nhé.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "word": "volume",
+    "ipa": "/ˈvɑːljuːm/",
+    "meaning": "độ phồng bồng bềnh của tóc",
+    "example": "Blow-drying your hair upside down is a great way to add volume.",
+    "exampleMeaning": "Cúi đầu xuống sấy ngược tóc là cách tuyệt vời để tạo độ phồng cho tóc.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "cool tone",
+    "ipa": "/kuːl toʊn/",
+    "meaning": "tông màu lạnh — các sắc màu ánh khói, tro, rêu",
+    "example": "Ash blonde is a cool tone that fits people with fair skin.",
+    "exampleMeaning": "Màu vàng khói là một tông lạnh rất hợp với những người có làn da sáng.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "warm tone",
+    "ipa": "/wɔːrm toʊn/",
+    "meaning": "tông màu ấm — các sắc màu ánh đỏ, đồng, vàng ấm",
+    "example": "Copper and gold are warm tones that look great in the fall.",
+    "exampleMeaning": "Màu đồng và vàng kim là các tông ấm nhìn rất đẹp vào mùa thu.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "stylist",
+    "ipa": "/ˈstaɪlɪst/",
+    "meaning": "thợ làm tóc / nhà tạo mẫu tóc (hairdresser)",
+    "example": "Who is your favorite hair stylist at this salon?",
+    "exampleMeaning": "Ai là thợ làm tóc yêu thích của chị ở tiệm này thế ạ?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "comb",
+    "ipa": "/koʊm/",
+    "meaning": "lược bí / lược thưa dùng để chải mượt hoặc chia tóc",
+    "example": "Use a wide-tooth comb to prevent breakage when your hair is wet.",
+    "exampleMeaning": "Dùng lược thưa chải để tránh bị rụng đứt tóc khi tóc đang ướt nhé.",
+    "level": "A1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "round brush",
+    "ipa": "/raʊnd brʌʃ/",
+    "meaning": "lược tròn sấy tóc — dùng cuộn tóc tạo kiểu bồng bềnh dưới máy sấy",
+    "example": "A round brush is essential for a professional blowout.",
+    "exampleMeaning": "Lược tròn là dụng cụ không thể thiếu để sấy phồng chuyên nghiệp.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "hair sectioning",
+    "ipa": "/hɛr ˈsɛkʃənɪŋ/",
+    "meaning": "chia phân khu tóc — dùng kẹp chia tóc thành từng phần nhỏ trước khi cắt/nhuộm",
+    "example": "Clean sectioning makes it much easier to apply highlights.",
+    "exampleMeaning": "Chia phân khu tóc sạch sẽ giúp cho việc nhuộm highlight dễ dàng hơn nhiều.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "dry scalp",
+    "ipa": "/draɪ skælp/",
+    "meaning": "da đầu bị khô",
+    "example": "A dry scalp can cause itchiness and minor flaking.",
+    "exampleMeaning": "Da đầu khô có thể gây ngứa ngáy và bong tróc vảy nhẹ.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "dandruff",
+    "ipa": "/ˈdændrʌf/",
+    "meaning": "gàu — tế bào chết bong tróc trên da đầu",
+    "example": "We have a special anti-dandruff shampoo that works wonders.",
+    "exampleMeaning": "Bên em có dầu gội trị gàu đặc trị hiệu quả cực kỳ luôn.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "hair loss",
+    "ipa": "/hɛr lɔːs/",
+    "meaning": "rụng tóc",
+    "example": "Stress is one of the main factors leading to hair loss.",
+    "exampleMeaning": "Căng thẳng là một trong những nhân tố chính dẫn tới việc rụng tóc.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "towel dry",
+    "ipa": "/ˈtaʊəl draɪ/",
+    "meaning": "vắt khô bằng khăn — lau cho bớt nước trước khi sấy",
+    "example": "Make sure to towel dry the hair thoroughly before blow-drying.",
+    "exampleMeaning": "Hãy lau khô tóc kỹ bằng khăn trước khi bắt đầu dùng máy sấy nhé.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "word": "rinse",
+    "ipa": "/rɪns/",
+    "meaning": "xả sạch nước — xả sạch dầu gội/dầu xả/thuốc nhuộm bằng nước sạch",
+    "example": "We need to rinse out the color before applying the toner.",
+    "exampleMeaning": "Chúng ta cần xả sạch thuốc nhuộm trước khi quét toner lên nha.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "word": "cut length check",
+    "ipa": "/haʊ mʌʧ ɑːr wiː ˈkʌtɪŋ ɔːf təˈdeɪ/",
+    "meaning": "Hôm nay mình muốn cắt ngắn khoảng bao nhiêu? — câu hỏi của thợ cắt tóc",
+    "example": "How much are we cutting off today? An inch or two?",
+    "exampleMeaning": "Hôm nay mình cắt ngắn khoảng bao nhiêu ạ? Một hay hai inch (2.5 - 5cm) ạ?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "just a trim",
+    "ipa": "/ʤʌst ə trɪm pliːz/",
+    "meaning": "Chỉ tỉa nhẹ một chút thôi nhé — câu trả lời của khách làm tóc",
+    "example": "Just a trim, please. Keep the length as much as possible.",
+    "exampleMeaning": "Chỉ tỉa nhẹ thôi nhé. Giữ lại độ dài tối đa giúp tôi.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "haircut style",
+    "ipa": "/duː juː wɑːnt ˈleɪərz ɔːr ə streɪt kʌt/",
+    "meaning": "Chị muốn cắt tầng layer hay cắt bằng? — câu hỏi tư vấn phom tóc",
+    "example": "Do you want layers or a straight cut for your new style?",
+    "exampleMeaning": "Chị muốn tỉa tầng layer hay cắt bằng cho phom tóc mới này ạ?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "reference photo",
+    "ipa": "/aɪ brɔːt ə ˈrɛfərəns ˈpɪkʧər/",
+    "meaning": "Tôi có mang theo ảnh mẫu đây — khách cho thợ xem kiểu tóc mong muốn",
+    "example": "I brought a reference picture of the hairstyle I want.",
+    "exampleMeaning": "Tôi có mang theo ảnh mẫu kiểu tóc tôi muốn làm đây.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "bangs consultation",
+    "ipa": "/wʊd juː laɪk tuː kiːp jɔːr bæŋz/",
+    "meaning": "Chị có muốn cắt tiếp tóc mái không? — câu hỏi tư vấn mái",
+    "example": "Would you like to keep your bangs or blend them into the layers?",
+    "exampleMeaning": "Chị có muốn giữ lại tóc mái không, hay là tỉa đuôi mái loang vào phần layer luôn?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "bleaching damage",
+    "ipa": "/jɔːr hɛr ɪz kwaɪt ˈdæmɪʤd frəm bliːʧɪŋ/",
+    "meaning": "Tóc chị bị hư tổn nhiều do tẩy tóc — thợ khuyên dưỡng bảo vệ",
+    "example": "Your hair is quite damaged from bleaching. We should do a treatment.",
+    "exampleMeaning": "Tóc của chị khá bị hư tổn do tẩy rồi. Chúng ta nên hấp dầu phục hồi thôi chị.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "base lift",
+    "ipa": "/wiː niːd tuː lɪft jɔːr beɪs ˈkʌlər fɜːrst/",
+    "meaning": "Cần nâng nền tông tóc của chị lên trước — bước đầu khi nhuộm tóc đen sang sáng",
+    "example": "We need to lift your base color first before applying the ash dye.",
+    "exampleMeaning": "Chúng ta cần nâng nền tông tóc của chị lên trước rồi mới nhuộm màu khói được ạ.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "patch test",
+    "ipa": "/lɛts duː ə pæʧ tɛst/",
+    "meaning": "Thử phản ứng thuốc nhuộm trên da trước xem khách có dị ứng hóa chất không",
+    "example": "Let's do a patch test to make sure you're not allergic to the dye.",
+    "exampleMeaning": "Để em thử thuốc lên da trước xem chị có bị dị ứng với màu nhuộm không nhé.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "wash temperature check",
+    "ipa": "/haʊ dʌz ðə ˈwɔːtər ˈtɛmprəʧər fiːl/",
+    "meaning": "Nước gội đầu ấm thế này vừa chưa chị? — câu hỏi lịch sự tại bồn gội",
+    "example": "How does the water temperature feel? Let me know if it's too hot.",
+    "exampleMeaning": "Nước gội đầu ấm thế này vừa chưa chị? Nếu nóng quá thì bảo em nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "scalp add-on",
+    "ipa": "/wʊd juː laɪk tuː æd ə skælp ˈtriːtmənt/",
+    "meaning": "Chị có muốn làm thêm liệu trình dưỡng da đầu không? — upsell dịch vụ gội dưỡng sinh",
+    "example": "Would you like to add a scalp treatment today to help with the dry skin?",
+    "exampleMeaning": "Hôm nay chị có muốn làm thêm liệu trình dưỡng da đầu để giảm tình trạng da khô không?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "lean back bowl",
+    "ipa": "/pliːz liːn jɔːr hɛd bæk ˈɪntuː ðə boʊl/",
+    "meaning": "Chị ngửa đầu ra sau bồn gội giúp em nhé — hướng dẫn khách nằm gội",
+    "example": "Please lean your head back into the bowl. Make sure you are comfortable.",
+    "exampleMeaning": "Chị ngửa đầu ra sau bồn gội giúp em nhé. Xem nằm vậy có thoải mái không ạ.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "tone preference",
+    "ipa": "/ɑːr juː ˈlʊkɪŋ fɔːr ə kuːl ɔːr wɔːrm toʊn/",
+    "meaning": "Chị muốn nhuộm tông màu lạnh hay tông ấm ạ? — câu hỏi tư vấn màu nhuộm",
+    "example": "Are you looking for a cool or warm tone for this season?",
+    "exampleMeaning": "Mùa này chị đang muốn nhuộm tông màu lạnh hay tông màu ấm thế ạ?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "styling finish",
+    "ipa": "/duː juː wɑːnt tuː staɪl ɪt wɪð sʌm kɜːrlz/",
+    "meaning": "Chị có muốn sấy uốn xoăn tạo kiểu không? — sấy xoăn giả sau khi làm xong",
+    "example": "Do you want to style it with some curls, or just keep it straight?",
+    "exampleMeaning": "Chị có muốn sấy uốn xoăn tạo kiểu bồng bềnh không, hay là cứ để thẳng tự nhiên ạ?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "hair compliment",
+    "ipa": "/jɔːr hɛr lʊks soʊ ˈhɛlθi ænd ˈʃaɪni/",
+    "meaning": "Tóc chị nhìn khỏe và bóng mượt quá! — câu khen ngợi lấy thiện cảm",
+    "example": "Your hair looks so healthy and shiny after the keratin treatment!",
+    "exampleMeaning": "Sau khi phục hồi keratin nhìn tóc chị khỏe và bóng mượt hẳn luôn!",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  }
+]

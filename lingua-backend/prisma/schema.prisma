@@ -1,0 +1,215 @@
+// 🌐 LINGUA-ENG — Cấu hình Cơ sở dữ liệu (Prisma Schema)
+//
+// File này định nghĩa:
+// 1. Kết nối nguồn dữ liệu (PostgreSQL) và bộ sinh Prisma Client.
+// 2. Các bảng dữ liệu (Models) bao gồm: User, Word, và FlashcardProgress.
+//
+// 💡 So sánh với Spring Boot (Javi):
+// - Tương tự như các file Entity lớp Java có annotation @Entity, @Table, @Column.
+// - Khác biệt: Thay vì viết nhiều file Java Entity riêng lẻ, Prisma tập hợp tất cả cấu trúc bảng vào một file duy nhất này.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ------------------------------------------------------------------------------
+// 👤 MODEL: User (Người dùng hệ thống)
+// ------------------------------------------------------------------------------
+model User {
+  id           String              @id @default(uuid()) // Khóa chính dạng UUID bảo mật hơn tự tăng (id tự tăng dễ bị dò quét)
+  email        String              @unique // Email là duy nhất (tương đương @Column(unique = true))
+  password     String              // Mật khẩu đã được mã hóa bằng bcrypt
+  name         String              // Tên hiển thị của người học
+  currentLevel String              @default("A1") // Trình độ tiếng Anh hiện tại (A1, A2, B1, B2, C1, C2)
+  role         String              @default("USER") // Vai trò người dùng (USER, ADMIN)
+  streak       Int                 @default(0)  // Số ngày học liên tiếp hiện tại (streak 🔥)
+  xp           Int                 @default(0)  // Điểm kinh nghiệm tích lũy (dùng cho Leaderboard)
+  lastActiveAt DateTime?           @map("last_active_at") // Ngày gần nhất thực hiện học tập để tính toán Streak
+  dailyGoalXp  Int                 @default(50) @map("daily_goal_xp") // Mục tiêu XP mỗi ngày (mặc định 50 XP)
+  createdAt    DateTime            @default(now()) // Thời gian tạo tài khoản
+  updatedAt    DateTime            @updatedAt     // Tự động cập nhật thời gian chỉnh sửa gần nhất
+  
+  // Quan hệ: Một người dùng có nhiều tiến trình học từ vựng (Flashcard)
+  flashcards      FlashcardProgress[]
+  // Quan hệ: Một người dùng có nhiều kết quả bài tập AI
+  exerciseResults ExerciseResult[]
+  // Quan hệ: Một người dùng có nhiều cuộc hội thoại AI
+  conversations   ConversationSession[]
+  // Quan hệ: Một người dùng có nhiều lượt luyện phát âm (Shadowing)
+  shadowingAttempts ShadowingAttempt[]
+
+  @@map("users") // Đặt tên bảng dưới database là "users" thay vì "User"
+}
+
+// ------------------------------------------------------------------------------
+// 📚 MODEL: Word (Thư viện từ vựng mẫu)
+// ------------------------------------------------------------------------------
+model Word {
+  id             String              @id @default(uuid())
+  word           String              @unique // Từ vựng tiếng Anh (ví dụ: "departure")
+  ipa            String              // Phiên âm quốc tế (ví dụ: "/dɪˈpɑːrtʃər/")
+  meaning        String              // Nghĩa tiếng Việt (ví dụ: "sự khởi hành")
+  example        String              // Câu ví dụ tiếng Anh (ví dụ: "The departure time is 8:00 AM.")
+  exampleMeaning String              // Nghĩa tiếng Việt của câu ví dụ
+  level          String              // Cấp độ từ vựng (A1, A2, B1, B2, C1, C2)
+  topic          String              // Chủ đề từ vựng (Travel, Business, Food...)
+  partOfSpeech   String?             @map("part_of_speech") // Từ loại (Noun, Verb, Adjective, Adverb)
+  createdAt      DateTime            @default(now())
+
+  // Quan hệ ngược: Từ vựng này nằm trong tiến trình học của nhiều người dùng
+  usersProgress  FlashcardProgress[]
+
+  // 🚀 Index: Tăng tốc truy vấn lọc theo chủ đề + cấp độ (dùng trong getDecks, getDeckWords)
+  @@index([topic, level])
+  @@map("words") // Tên bảng dưới database là "words"
+}
+
+// ------------------------------------------------------------------------------
+// 📈 MODEL: FlashcardProgress (Tiến trình học Flashcard theo thuật toán SM-2)
+// ------------------------------------------------------------------------------
+// Bảng này đóng vai trò bảng trung gian (Many-to-Many) liên kết giữa User và Word.
+// Lưu trữ các chỉ số của thuật toán lặp lại ngắt quãng (Spaced Repetition System - SRS) 
+// để tính toán ngày ôn tập tối ưu tiếp theo cho từng từ của từng user.
+model FlashcardProgress {
+  id         String   @id @default(uuid())
+  userId     String   @map("user_id")
+  wordId     String   @map("word_id")
+  
+  // Quan hệ liên kết tới User và Word
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  word       Word     @relation(fields: [wordId], references: [id], onDelete: Cascade)
+
+  // Chỉ số thuật toán SM-2
+  interval   Int      @default(0)   // Khoảng cách số ngày chờ đến lượt ôn tập tiếp theo (mặc định ban đầu là 0)
+  repetition Int      @default(0)   // Số lần ôn tập đúng liên tiếp (mặc định ban đầu là 0)
+  efactor    Float    @default(2.5) // Hệ số dễ (Easiness Factor) - mặc định ban đầu là 2.5 theo chuẩn SM-2
+  dueDate    DateTime @default(now()) // Ngày đến hạn ôn tập tiếp theo
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Đảm bảo mỗi User chỉ có duy nhất một bản ghi tiến trình học cho mỗi Word
+  @@unique([userId, wordId])
+  // 🚀 Index: Tăng tốc truy vấn đếm từ cần ôn hôm nay (dùng trong getDashboard, getDecks)
+  @@index([userId, dueDate])
+  @@map("flashcard_progress") // Tên bảng dưới database
+}
+
+// ------------------------------------------------------------------------------
+// 📝 MODEL: ExerciseResult (Kết quả làm bài tập tự sinh bằng AI)
+// ------------------------------------------------------------------------------
+model ExerciseResult {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  topic     String   // Chủ đề bài tập (ví dụ: "Present Perfect", "Passive Voice")
+  level     String   // Trình độ (A1, A2, B1, B2, C1, C2)
+  score     Int      // Số câu trả lời đúng (ví dụ: 8)
+  total     Int      // Tổng số câu hỏi (ví dụ: 10)
+  xpEarned  Int      @map("xp_earned") // Điểm kinh nghiệm tích lũy nhận được (ví dụ: score * 10)
+  createdAt DateTime @default(now())
+
+  // 🚀 Index: Tăng tốc truy vấn lịch sử bài tập và thống kê XP hôm nay (dùng trong getHistory, getDashboard)
+  @@index([userId, createdAt])
+  @@map("exercise_results")
+}
+
+// ------------------------------------------------------------------------------
+// 🗣️ MODEL: ConversationSession (Phiên hội thoại luyện nói AI)
+// ------------------------------------------------------------------------------
+model ConversationSession {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scenario  String   // Tình huống hội thoại (ví dụ: "Job Interview", "At the Airport")
+  level     String   // Cấp độ (A2, B1, B2, C1)
+  status    String   @default("ACTIVE") // ACTIVE (Đang chat), COMPLETED (Đã kết thúc, có report)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Quan hệ
+  messages  ConversationMessage[]
+  report    ConversationReport?
+
+  // 🚀 Index: Tăng tốc truy vấn lịch sử hội thoại (dùng trong getHistory)
+  @@index([userId, createdAt])
+  @@map("conversation_sessions")
+}
+
+// ------------------------------------------------------------------------------
+// 💬 MODEL: ConversationMessage (Tin nhắn chi tiết trong phiên hội thoại)
+// ------------------------------------------------------------------------------
+model ConversationMessage {
+  id              String   @id @default(uuid())
+  sessionId       String   @map("session_id")
+  session         ConversationSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  sender          String   // "USER" hoặc "AI"
+  text            String   // Nội dung tin nhắn
+  grammarFeedback String?  @map("grammar_feedback") // Phản hồi ngữ pháp của AI cho câu nói của USER (lưu dạng JSON string)
+  createdAt       DateTime @default(now())
+
+  @@map("conversation_messages")
+}
+
+// ------------------------------------------------------------------------------
+// 📊 MODEL: ConversationReport (Báo cáo đánh giá tổng kết sau cuộc hội thoại)
+// ------------------------------------------------------------------------------
+model ConversationReport {
+  id                  String   @id @default(uuid())
+  sessionId           String   @unique @map("session_id")
+  session             ConversationSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  // Điểm số đánh giá (0-100) cho từng tiêu chí
+  scoreGrammar        Int      @map("score_grammar")
+  scoreVocabulary     Int      @map("score_vocabulary")
+  scoreFluency        Int      @map("score_fluency")
+  scoreRelevance      Int      @map("score_relevance")
+  
+  // Nhận xét chi tiết
+  feedbackStrength    String   @map("feedback_strength")    // Điểm mạnh
+  feedbackImprovement String   @map("feedback_improvement") // Điểm cần cải thiện
+  createdAt           DateTime @default(now())
+
+  @@map("conversation_reports")
+}
+
+// ------------------------------------------------------------------------------
+// 🎙️ MODEL: ShadowingPassage (Bài luyện đọc Shadowing mẫu)
+// ------------------------------------------------------------------------------
+model ShadowingPassage {
+  id                    String   @id @default(uuid())
+  title                 String   // Tiêu đề bài luyện đọc (ví dụ: "At the Airport — Checking In")
+  referenceText         String   @map("reference_text") // Câu tiếng Anh mẫu
+  vietnameseTranslation String   @map("vietnamese_translation") // Nghĩa tiếng Việt của câu gốc
+  level                 String   // Cấp độ (A2, B1, B2, C1)
+  topic                 String   // Chủ đề (Daily Life, Business, News, Movies, Travel...)
+  duration              String   // Thời lượng ước tính (ví dụ: "0:45")
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+
+  attempts              ShadowingAttempt[]
+
+  @@map("shadowing_passages")
+}
+
+// ------------------------------------------------------------------------------
+// 🎙️ MODEL: ShadowingAttempt (Lượt luyện phát âm Shadowing của user)
+// ------------------------------------------------------------------------------
+model ShadowingAttempt {
+  id           String   @id @default(uuid())
+  userId       String   @map("user_id")
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  passageId    String   @map("passage_id")   // ID bài luyện đọc
+  passage      ShadowingPassage @relation(fields: [passageId], references: [id], onDelete: Cascade)
+  passageTitle String   @map("passage_title") // Tiêu đề bài luyện đọc
+  score        Int      // Điểm phát âm chính xác (0-100)
+  createdAt    DateTime @default(now())
+
+  // 🚀 Index: Tăng tốc truy vấn lịch sử luyện phát âm (dùng trong getHistory)
+  @@index([userId, createdAt])
+  @@map("shadowing_attempts")
+}

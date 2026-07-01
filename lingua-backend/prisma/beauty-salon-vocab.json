@@ -1,0 +1,502 @@
+[
+  {
+    "word": "monomer",
+    "ipa": "/ˈmɑːnəmər/",
+    "meaning": "nước đắp bột (monomer liquid) — dung dịch lỏng trộn với bột acrylic để đắp móng",
+    "example": "Make sure the monomer-to-powder ratio is correct for a smooth application.",
+    "exampleMeaning": "Hãy đảm bảo tỷ lệ nước và bột đúng chuẩn để đắp bột được mịn đẹp.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "polymer powder",
+    "ipa": "/ˈpɑːlɪmər ˈpaʊdər/",
+    "meaning": "bột đắp móng (có nhiều màu: clear, pink, white, cover pink)",
+    "example": "We carry several shades of polymer powder including clear, pink, and natural.",
+    "exampleMeaning": "Tiệm em có nhiều tông bột đắp như trong, hồng và màu da tự nhiên.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "nail tip",
+    "ipa": "/neɪl tɪp/",
+    "meaning": "tip nhựa nối đầu móng — miếng nhựa dán vào đầu móng thật để tạo độ dài",
+    "example": "I need to glue a nail tip on this finger to add some length.",
+    "exampleMeaning": "Em cần dán tip nhựa vào ngón này để nối dài móng ra nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "nail form",
+    "ipa": "/neɪl fɔːrm/",
+    "meaning": "giấy form (khuôn giấy dùng làm bệ đỡ để đắp bột kéo dài móng)",
+    "example": "I prefer using a nail form instead of a tip for a more natural look.",
+    "exampleMeaning": "Em thích dùng giấy form hơn tip nhựa vì trông tự nhiên hơn.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "dehydrator",
+    "ipa": "/diːˈhaɪdreɪtər/",
+    "meaning": "nước kiềm dầu / khử nước — dung dịch hút ẩm bề mặt móng trước khi đắp bột",
+    "example": "Always apply dehydrator before primer to prevent lifting.",
+    "exampleMeaning": "Luôn quét nước kiềm dầu trước primer để tránh bị hở bột.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "primer",
+    "ipa": "/ˈpraɪmər/",
+    "meaning": "nước lót liên kết bột — chất lỏng quét lên móng thật để bột/gel bám chặt hơn",
+    "example": "Be careful with acid primer — don't let it touch the client's skin.",
+    "exampleMeaning": "Cẩn thận với primer gốc axit — đừng để dính vào da khách nhé.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "full set",
+    "ipa": "/fʊl sɛt/",
+    "meaning": "làm nguyên bộ móng mới (10 ngón) — dịch vụ đắp bột/gel từ đầu",
+    "example": "A full set of acrylic nails starts at forty-five dollars.",
+    "exampleMeaning": "Bộ móng đắp bột nguyên bộ mới giá bắt đầu từ 45 đô ạ.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "fill-in",
+    "ipa": "/ˈfɪl ɪn/",
+    "meaning": "refill / bơm bột — đắp bột bổ sung vào phần chân móng mọc ra sau 2-3 tuần",
+    "example": "You should come back for a fill-in every two to three weeks.",
+    "exampleMeaning": "Chị nên quay lại refill bột sau mỗi hai đến ba tuần nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "e-file",
+    "ipa": "/iː faɪl/",
+    "meaning": "máy mài móng (máy dũa điện) — thiết bị quay tốc độ cao để mài, giũa móng",
+    "example": "Let me use the e-file to smooth out the surface before applying gel.",
+    "exampleMeaning": "Để em dùng máy mài mịn bề mặt móng trước khi sơn gel nhé.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "drill bit",
+    "ipa": "/drɪl bɪt/",
+    "meaning": "đầu mài (mũi mài gắn vào máy dũa) — có nhiều loại: carbide, diamond, sanding band",
+    "example": "I need to switch to a finer drill bit for the finishing touches.",
+    "exampleMeaning": "Em cần đổi sang đầu mài mịn hơn để hoàn thiện bước cuối.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "cuticle nipper",
+    "ipa": "/ˈkjuːtɪkl ˈnɪpər/",
+    "meaning": "kềm cắt da — dụng cụ bấm tỉa da thừa viền móng",
+    "example": "All cuticle nippers must be disinfected between each client.",
+    "exampleMeaning": "Tất cả kềm cắt da phải được khử trùng sau mỗi khách.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "nail clipper",
+    "ipa": "/neɪl ˈklɪpər/",
+    "meaning": "kềm cắt móng / bấm móng — dùng cắt ngắn móng thật hoặc tip nhựa",
+    "example": "Use the nail clipper to shorten the tips before shaping.",
+    "exampleMeaning": "Dùng kềm bấm cắt ngắn tip nhựa trước khi giũa tạo phom nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "dappen dish",
+    "ipa": "/ˈdæpən dɪʃ/",
+    "meaning": "hũ đựng liquid — chén nhỏ bằng thủy tinh rót nước monomer vừa đủ dùng khi đắp bột",
+    "example": "Pour a small amount of liquid into the dappen dish before you start.",
+    "exampleMeaning": "Rót một lượng nhỏ nước vào hũ đựng trước khi bắt đầu đắp bột nhé.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "acrylic brush",
+    "ipa": "/əˈkrɪlɪk brʌʃ/",
+    "meaning": "cọ đắp bột — cọ lông chồn Kolinsky chuyên dụng để kéo và tạo phom bột",
+    "example": "A good quality acrylic brush makes a huge difference in your work.",
+    "exampleMeaning": "Cây cọ đắp bột chất lượng tốt sẽ tạo ra sự khác biệt rất lớn trong tay nghề.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "grit",
+    "ipa": "/ɡrɪt/",
+    "meaning": "độ nhám của dũa — số grit càng nhỏ (80/100) càng thô, càng lớn (180/240) càng mịn",
+    "example": "Use a 100-grit file for acrylic and a 240-grit file for natural nails.",
+    "exampleMeaning": "Dùng dũa 100 grit cho móng bột và dũa 240 grit cho móng thật.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "buffer block",
+    "ipa": "/ˈbʌfər blɑːk/",
+    "meaning": "cục phao / miếng chà mịn móng — khối xốp mịn dùng đánh bóng bề mặt móng",
+    "example": "Buff the surface gently with a buffer block to remove any ridges.",
+    "exampleMeaning": "Chà nhẹ bề mặt móng bằng cục phao để làm phẳng các vết gợn nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "cuticle oil",
+    "ipa": "/ˈkjuːtɪkl ɔɪl/",
+    "meaning": "dầu dưỡng viền móng — thoa xung quanh móng để làm mềm da và dưỡng ẩm",
+    "example": "Applying cuticle oil daily will keep your nails hydrated and strong.",
+    "exampleMeaning": "Thoa dầu dưỡng viền móng hàng ngày sẽ giúp móng chị luôn đủ ẩm và chắc khỏe.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "lifting",
+    "ipa": "/ˈlɪftɪŋ/",
+    "meaning": "hở bột / bong móng — hiện tượng bột acrylic bị bong khỏi móng thật, dễ gây nấm móng",
+    "example": "Proper nail prep is the key to preventing lifting.",
+    "exampleMeaning": "Prep móng đúng cách là bí quyết quan trọng nhất để tránh hở bột.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "soak off",
+    "ipa": "/soʊk ɔːf/",
+    "meaning": "ngâm tháo móng — ủ móng bằng bông tẩm acetone để hòa tan bột/gel cũ",
+    "example": "I need to soak off my old acrylics before getting the new set.",
+    "exampleMeaning": "Tôi cần ngâm tháo móng bột cũ ra trước khi làm bộ mới nhé.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Verb"
+  },
+  {
+    "word": "top coat",
+    "ipa": "/tɑːp koʊt/",
+    "meaning": "nước sơn bóng phủ ngoài — lớp sơn cuối cùng bảo vệ màu sơn và tạo độ bóng",
+    "example": "Can you use a matte top coat instead of a shiny one?",
+    "exampleMeaning": "Sơn cho tôi lớp phủ lì (matte) chứ đừng bóng nha.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "base coat",
+    "ipa": "/beɪs koʊt/",
+    "meaning": "nước sơn lót — lớp sơn nền đầu tiên giúp bảo vệ móng thật và tăng độ bám",
+    "example": "Always apply a base coat first to prevent your nails from turning yellow.",
+    "exampleMeaning": "Luôn sơn lớp lót trước để tránh móng bị ố vàng nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "dust brush",
+    "ipa": "/dʌst brʌʃ/",
+    "meaning": "chổi phủi bụi — chổi lông mềm phủi sạch bụi bột bám trên tay khách sau khi mài",
+    "example": "Use the dust brush to clean off the filing residue before polishing.",
+    "exampleMeaning": "Dùng chổi phủi sạch bụi bột sau khi giũa xong rồi mới sơn nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "french tip",
+    "ipa": "/frɛnʧ tɪp/",
+    "meaning": "sơn đầu móng trắng (kiểu French) — phom móng cổ điển nền hồng đầu trắng",
+    "example": "I'd like a classic French tip with white on the free edge.",
+    "exampleMeaning": "Tôi muốn làm kiểu French cổ điển, sơn trắng phần đầu móng nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "ombre nails",
+    "ipa": "/ˈɑːmbreɪ neɪlz/",
+    "meaning": "móng loang màu (ombre / baby boomer) — kỹ thuật pha trộn 2 màu bột tạo hiệu ứng chuyển sắc",
+    "example": "Ombre nails are very trendy right now, especially the pink-to-white fade.",
+    "exampleMeaning": "Móng loang màu đang rất hot hiện nay, đặc biệt kiểu chuyển sắc từ hồng sang trắng.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "overlay",
+    "ipa": "/ˈoʊvərleɪ/",
+    "meaning": "đắp bột/gel phủ lên móng thật (không nối dài) — giúp gia cố móng yếu",
+    "example": "If you want stronger nails but no extra length, an overlay is perfect.",
+    "exampleMeaning": "Nếu chị muốn móng chắc hơn mà không cần dài ra thì đắp overlay là hợp nhất.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "gel polish",
+    "ipa": "/ʤɛl ˈpɑːlɪʃ/",
+    "meaning": "sơn gel — loại sơn bền 2-3 tuần, phải hơ dưới đèn LED/UV mới khô",
+    "example": "I highly recommend gel polish. It lasts up to three weeks without chipping.",
+    "exampleMeaning": "Em khuyên chị nên sơn gel nha. Giữ được tới ba tuần mà không bị tróc đâu ạ.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "dip powder",
+    "ipa": "/dɪp ˈpaʊdər/",
+    "meaning": "bột nhúng (dip / SNS) — kỹ thuật nhúng móng vào bột màu, không cần hơ đèn UV",
+    "example": "I want to try dip powder this time. Do you guys do SNS?",
+    "exampleMeaning": "Lần này tôi muốn thử nhúng bột. Tiệm mình có làm hãng SNS không?",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "cuticle pusher",
+    "ipa": "/ˈkjuːtɪkl ˈpʊʃər/",
+    "meaning": "cây đẩy da — dụng cụ kim loại hoặc gỗ cam dùng đẩy lùi da viền móng",
+    "example": "Gently push back the cuticles with a cuticle pusher before applying product.",
+    "exampleMeaning": "Nhẹ nhàng đẩy lùi da viền móng bằng cây đẩy da trước khi đắp sản phẩm.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "acetone",
+    "ipa": "/ˈæsɪtoʊn/",
+    "meaning": "aceton / nước tẩy sơn — dung dịch dung môi cực mạnh dùng để tháo sơn gel, bột, dip",
+    "example": "Soak each nail in pure acetone for about ten minutes to remove the gel.",
+    "exampleMeaning": "Ngâm mỗi ngón tay trong aceton nguyên chất khoảng mười phút để tháo gel.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "nail art",
+    "ipa": "/neɪl ɑːrt/",
+    "meaning": "vẽ móng nghệ thuật — bao gồm vẽ hoa, đính đá, foil, chrome, sticker",
+    "example": "Would you like to add some simple nail art or stones on your ring fingers?",
+    "exampleMeaning": "Chị có muốn vẽ hoa đơn giản hay đính đá lên hai ngón áp út không?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "sanitation",
+    "ipa": "/ˌsænɪˈteɪʃn/",
+    "meaning": "vệ sinh khử trùng dụng cụ — quy trình bắt buộc theo State Board: rửa → ngâm Barbicide → lưu kín",
+    "example": "The State Board inspector checks our sanitation procedures every year.",
+    "exampleMeaning": "Thanh tra Sở Y tế kiểm tra quy trình vệ sinh khử trùng của tiệm mỗi năm.",
+    "level": "B2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "almond shape",
+    "ipa": "/ˈɑːmənd ʃeɪp/",
+    "meaning": "phom móng hạnh nhân (nhọn tròn ở đầu) — rất được ưa chuộng vì tôn dáng bàn tay",
+    "example": "I'd like to go with a medium almond shape, please.",
+    "exampleMeaning": "Làm cho tôi phom hạnh nhân độ dài vừa phải nha.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "coffin shape",
+    "ipa": "/ˈkɔːfɪn ʃeɪp/",
+    "meaning": "phom quan tài / ballerina — nhọn dần nhưng đầu móng lại vuông ngang, rất cá tính",
+    "example": "Can you shape them into a coffin style? I want them long.",
+    "exampleMeaning": "Giũa phom quan tài dùm tôi nhé. Tôi muốn để dài.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "squoval",
+    "ipa": "/ˈskwoʊvl/",
+    "meaning": "phom vuông bầu (Square + Oval) — bo tròn hai bên góc, thanh lịch và ít bị gãy",
+    "example": "I prefer squoval nails, not too square and not too round.",
+    "exampleMeaning": "Tôi thích phom vuông bầu, đừng vuông quá mà cũng đừng tròn quá.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "stiletto",
+    "ipa": "/stɪˈlɛtoʊ/",
+    "meaning": "phom móng nhọn hoắt (như gót giày nhọn) — cá tính mạnh, dễ gãy đầu nhọn",
+    "example": "Let's do stiletto shape, make them super pointy!",
+    "exampleMeaning": "Giũa phom nhọn hoắt cho tôi đi, nhọn hết cỡ luôn!",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "cut-down",
+    "ipa": "/kʌt daʊn/",
+    "meaning": "cắt ngắn bớt móng — giảm độ dài móng giả/thật trước khi giũa phom mới",
+    "example": "Do you need a cut-down or do you want to keep this length?",
+    "exampleMeaning": "Chị có muốn cắt ngắn bớt không hay giữ nguyên độ dài này?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "broken nail",
+    "ipa": "/ˈbroʊkən neɪl/",
+    "meaning": "móng bị gãy — thường phải sửa bằng cách đắp bột nối lại, tính thêm phí",
+    "example": "You have a broken nail here. Do you want me to fix it for three dollars extra?",
+    "exampleMeaning": "Chị có một ngón bị gãy ở đây. Chị muốn em sửa lại không, thêm 3 đô ạ?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "color swatch",
+    "ipa": "/ˈkʌlər swɑːʧ/",
+    "meaning": "bảng màu mẫu / nail ring — bảng móng sơn sẵn màu để khách chọn",
+    "example": "Here are the color swatches. Let me know when you pick one.",
+    "exampleMeaning": "Bảng màu đây ạ. Chị chọn được màu nào thì bảo em nhé.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "smudge",
+    "ipa": "/smʌʤ/",
+    "meaning": "vết quẹt hỏng sơn — khi lỡ chạm vào móng chưa khô làm nhòe lớp sơn",
+    "example": "Oh no, I just smudged my ring finger! Can you fix it?",
+    "exampleMeaning": "Thôi chết, tôi lỡ quẹt hư móng ngón áp út rồi! Sửa lại hộ tôi với.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "matte finish",
+    "ipa": "/mæt ˈfɪnɪʃ/",
+    "meaning": "hiệu ứng nhám lì — lớp phủ không bóng tạo cảm giác sang trọng, hợp với tông tối",
+    "example": "I want a matte finish on all ten nails instead of glossy.",
+    "exampleMeaning": "Tôi muốn phủ lì cả 10 ngón thay vì bóng nhé.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "UV lamp",
+    "ipa": "/juːˈviː læmp/",
+    "meaning": "máy hơ đèn UV/LED — thiết bị chiếu tia cực tím/LED làm khô sơn gel",
+    "example": "Put your hand all the way in the UV lamp, please.",
+    "exampleMeaning": "Cho tay sâu hẳn vào trong máy hơ giúp em nhé.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "pedicure upgrade",
+    "ipa": "/ˈpɛdɪkjʊr ˈʌpɡreɪd/",
+    "meaning": "nâng cấp gói pedicure — thêm dịch vụ tẩy da chết, đắp nạ, massage đá nóng",
+    "example": "For ten dollars more, you can get the sugar scrub and a hot stone massage.",
+    "exampleMeaning": "Thêm 10 đô là chị được tẩy tế bào chết bằng đường cát với massage đá nóng rồi ạ.",
+    "level": "B1",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "water temperature",
+    "ipa": "/ˈwɔːtər ˈtɛmprəʧər/",
+    "meaning": "nhiệt độ nước ngâm chân — hỏi khách trước khi cho chân vào bồn pedicure",
+    "example": "How is the water temperature? Is it too hot or too cold?",
+    "exampleMeaning": "Nước ngâm chân thế này vừa chưa chị? Có bị nóng quá hay lạnh quá không ạ?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "relax your hand",
+    "ipa": "/rɪˈlæks jɔːr hænd/",
+    "meaning": "thả lỏng bàn tay — nhắc khách đừng gồng cứng ngón tay khi thợ đang sơn hoặc giũa",
+    "example": "Just relax your hand for me, please. Don't press down.",
+    "exampleMeaning": "Chị thả lỏng bàn tay ra giúp em nhé. Đừng ấn ngón tay xuống.",
+    "level": "A1",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "check out",
+    "ipa": "/ʧɛk aʊt/",
+    "meaning": "thanh toán / tính tiền — quá trình trả tiền mặt/quẹt thẻ ở quầy thu ngân salon",
+    "example": "Who did your nails today so I can check you out?",
+    "exampleMeaning": "Hôm nay ai làm móng cho chị thế để em tính tiền ạ?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "cash or card",
+    "ipa": "/kæʃ ɔːr kɑːrd/",
+    "meaning": "tiền mặt hay quẹt thẻ — câu hỏi phương thức thanh toán khi tính tiền",
+    "example": "Your total is sixty-five dollars. Are you paying with cash or card?",
+    "exampleMeaning": "Tổng cộng của chị hết 65 đô ạ. Chị trả tiền mặt hay quẹt thẻ?",
+    "level": "A1",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "tipping",
+    "ipa": "/ˈtɪpɪŋ/",
+    "meaning": "tiền tip / tiền boa — mức chuẩn ngành làm đẹp Mỹ là 15%-20% trên hóa đơn",
+    "example": "We accept tips in cash only, but there is an ATM near the door.",
+    "exampleMeaning": "Tiệm em chỉ nhận tiền tip bằng tiền mặt thôi ạ, có máy ATM gần cửa ra vào đấy ạ.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "book appointment",
+    "ipa": "/bʊk əˈpɔɪntmənt/",
+    "meaning": "đặt lịch hẹn — giúp giữ chân khách quay lại tiệm đều đặn",
+    "example": "Would you like to book your next appointment in two weeks?",
+    "exampleMeaning": "Chị có muốn đặt lịch hẹn lần tới sau hai tuần nữa luôn không?",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "skin tone",
+    "ipa": "/skɪn toʊn/",
+    "meaning": "tông da / nước da — dùng khi khen hoặc tư vấn màu sơn phù hợp cho khách",
+    "example": "This color looks gorgeous on your skin tone!",
+    "exampleMeaning": "Màu này lên tôn da tay chị đẹp xuất sắc luôn!",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "filing nails",
+    "ipa": "/ˈfaɪlɪŋ neɪlz/",
+    "meaning": "giũa móng — dùng dũa tay hoặc máy mài để tạo phom và mài mịn móng",
+    "example": "Does this hurt? Let me know if I'm filing too hard.",
+    "exampleMeaning": "Có bị đau không chị? Nếu em giũa mạnh tay quá thì bảo em nha.",
+    "level": "A2",
+    "topic": "Beauty",
+    "partOfSpeech": "Noun"
+  }
+]

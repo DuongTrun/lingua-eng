@@ -765,7 +765,23 @@ async function main() {
     }
   }
 
+  // 💄 Đọc thêm file từ vựng chuyên ngành General Beauty (Nails, Wax, Skincare, Giao tiếp salon)
+  const generalBeautyPath = path.join(__dirname, 'general-beauty-vocab.json');
+  if (fs.existsSync(generalBeautyPath)) {
+    try {
+      const generalBeautyContent = fs.readFileSync(generalBeautyPath, 'utf-8');
+      const generalBeautyData = JSON.parse(generalBeautyContent);
+      if (Array.isArray(generalBeautyData) && generalBeautyData.length > 0) {
+        finalWords = [...finalWords, ...generalBeautyData];
+        console.log(`💄 Tìm thấy file general-beauty-vocab.json. Đã gộp thêm ${generalBeautyData.length} từ vựng chuyên ngành Beauty chung!`);
+      }
+    } catch (e) {
+      console.warn('⚠️ Lỗi khi đọc file general-beauty-vocab.json, bỏ qua file này.');
+    }
+  }
+
   // 🔄 Loại bỏ từ trùng lặp (deduplicate theo trường `word`)
+
   // Khi có nhiều nguồn dữ liệu (words.json, wordsData, beauty-salon-vocab.json),
   // các từ có thể xuất hiện trùng. Giữ lại bản xuất hiện SAU CÙNG (ưu tiên dữ liệu mới hơn).
   const wordMap = new Map<string, WordSeedEntry>();

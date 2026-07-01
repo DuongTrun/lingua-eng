@@ -213,7 +213,7 @@ export default function GrammarPage() {
                         <div>
                           <p className="text-xs text-outline font-bold">Thợ nói (Stylist/Lash Tech):</p>
                           <p className="text-sm font-bold text-on-surface leading-relaxed">
-                            "{g.exampleStyle}"
+                            &quot;{g.exampleStyle}&quot;
                           </p>
                           <p className="text-xs text-on-surface-variant italic">
                             ({g.exampleTranslation})
@@ -222,9 +222,10 @@ export default function GrammarPage() {
                         <div>
                           <p className="text-xs text-outline font-bold">Khách trả lời (Client):</p>
                           <p className="text-sm font-semibold text-slate-700 italic">
-                            "{g.exampleResponse}"
+                            &quot;{g.exampleResponse}&quot;
                           </p>
                         </div>
+
                       </div>
                     </div>
                     <div className="text-[11px] text-amber-700 font-extrabold flex items-center gap-1">

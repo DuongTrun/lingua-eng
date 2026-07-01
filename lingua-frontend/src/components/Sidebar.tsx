@@ -224,27 +224,3 @@ export default function Sidebar({ activeItem, showMobileHeader = true }: Sidebar
   );
 }
 
-
-        {/* User Card & Logout */}
-        <div className="pt-6 border-t border-outline-variant/30 flex flex-col gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center text-sm uppercase">
-              {user.name.charAt(0)}
-            </div>
-            <div className="overflow-hidden">
-              <p className="font-bold text-sm truncate">{user.name}</p>
-              <p className="text-xs text-on-surface-variant truncate">{user.email}</p>
-            </div>
-          </div>
-          <button
-            onClick={handleLogout}
-            className="w-full py-2.5 px-4 bg-error/10 hover:bg-error/20 text-error font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2"
-          >
-            <span className="material-symbols-outlined text-lg">logout</span>
-            Đăng xuất
-          </button>
-        </div>
-      </aside>
-    </>
-  );
-}

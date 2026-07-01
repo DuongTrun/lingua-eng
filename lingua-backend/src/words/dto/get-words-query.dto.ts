@@ -36,4 +36,9 @@ export class GetWordsQueryDto {
   @IsString({ message: 'Từ khóa tìm kiếm phải là chuỗi ký tự!' })
   @MaxLength(200, { message: 'Từ khóa tìm kiếm không được vượt quá 200 ký tự!' })
   search?: string;
+
+  @IsOptional()
+  @IsString()
+  beautyMode?: string;
 }
+

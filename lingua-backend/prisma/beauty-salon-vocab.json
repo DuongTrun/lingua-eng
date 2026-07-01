@@ -498,5 +498,106 @@
     "level": "A2",
     "topic": "Beauty",
     "partOfSpeech": "Noun"
+  },
+  {
+    "word": "eyelash extensions",
+    "ipa": "/ˈaɪlæʃ ɪkˈstenʃnz/",
+    "meaning": "nối mi — dịch vụ gắn sợi mi giả vào mi thật để tạo độ dày và dài",
+    "example": "How long do these eyelash extensions usually last?",
+    "exampleMeaning": "Bộ nối mi này thường giữ được trong bao lâu thế em?",
+    "level": "A2",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "lash adhesive",
+    "ipa": "/læʃ ædˈhiːsɪv/",
+    "meaning": "keo nối mi — keo chuyên dụng nhanh khô để gắn mi giả",
+    "example": "I only use high-quality lash adhesive to ensure good retention.",
+    "exampleMeaning": "Em chỉ dùng keo nối mi chất lượng cao để đảm bảo mi bền lâu.",
+    "level": "B1",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "tweezers",
+    "ipa": "/ˈtwiːzərz/",
+    "meaning": "nhíp nối mi — nhíp gắp mi giả hoặc nhíp tách mi thật",
+    "example": "A lash artist always needs a pair of curved tweezers for volume lashing.",
+    "exampleMeaning": "Người làm mi luôn cần một chiếc nhíp cong để nối mi volume.",
+    "level": "A2",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "classic lashes",
+    "ipa": "/ˈklæsɪk ˈlæʃɪz/",
+    "meaning": "nối mi classic — kỹ thuật nối một sợi mi giả lên một sợi mi thật",
+    "example": "Classic lashes give a very natural mascara look.",
+    "exampleMeaning": "Nối mi classic mang lại vẻ đẹp tự nhiên giống như chuốt mascara.",
+    "level": "A2",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "volume lashes",
+    "ipa": "/ˈvɑːljuːm ˈlæʃɪz/",
+    "meaning": "nối mi volume — kỹ thuật tạo chùm (fan) gồm nhiều sợi mi giả siêu mảnh gắn lên một sợi mi thật",
+    "example": "If you want a fuller and fluffier look, you should get volume lashes.",
+    "exampleMeaning": "Nếu chị muốn có vẻ ngoài dày và bồng bềnh hơn thì nên nối mi volume.",
+    "level": "B1",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "hybrid lashes",
+    "ipa": "/ˈhaɪbrɪd ˈlæʃɪz/",
+    "meaning": "nối mi hybrid (lai) — sự kết hợp giữa mi classic tự nhiên và mi volume dày dặn",
+    "example": "Hybrid lashes are the perfect balance between natural and dramatic.",
+    "exampleMeaning": "Nối mi hybrid là sự kết hợp hoàn hảo giữa nét tự nhiên và sắc sảo.",
+    "level": "B1",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "lash retention",
+    "ipa": "/læʃ rɪˈtenʃn/",
+    "meaning": "độ bền của mi nối — khoảng thời gian mi giả bám trên mi thật trước khi rụng",
+    "example": "Using a sealer can help improve your lash retention significantly.",
+    "exampleMeaning": "Sử dụng dầu khóa mi (sealer) có thể giúp tăng độ bền mi nối đáng kể.",
+    "level": "B2",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "lash lift",
+    "ipa": "/læʃ lɪft/",
+    "meaning": "uốn mi — kỹ thuật định hình mi thật cong vút lên bằng dung dịch uốn chuyên dụng",
+    "example": "A lash lift and tint is a great low-maintenance alternative to extensions.",
+    "exampleMeaning": "Uốn mi và nhuộm đen mi là sự thay thế tuyệt vời, ít cần chăm sóc so với nối mi.",
+    "level": "B1",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "eyelash remover",
+    "ipa": "/ˈaɪlæʃ rɪˈmuːvər/",
+    "meaning": "kem/gel tháo mi — dung dịch hòa tan keo để tháo mi nối an toàn không đau",
+    "example": "Never pull your extensions off; always use a professional eyelash remover.",
+    "exampleMeaning": "Đừng bao giờ tự bứt mi nối ra; hãy luôn dùng gel tháo mi chuyên nghiệp.",
+    "level": "B1",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "eye shape",
+    "ipa": "/aɪ ʃeɪp/",
+    "meaning": "dáng mắt — dáng mắt của khách (mắt hạnh nhân, mắt tròn, mắt sụp, mắt một mí)",
+    "example": "We should choose a lash style that complements your eye shape.",
+    "exampleMeaning": "Chúng ta nên chọn kiểu mi phù hợp để tôn lên dáng mắt của chị.",
+    "level": "A2",
+    "topic": "Lashes",
+    "partOfSpeech": "Noun"
   }
 ]
+

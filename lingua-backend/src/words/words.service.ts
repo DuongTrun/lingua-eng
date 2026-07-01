@@ -67,7 +67,7 @@ export class WordsService {
     const limit = Math.min(100, Math.max(1, Number(query.limit) || 20));
     const skip = (page - 1) * limit;
 
-    const { level, topic, search } = query;
+    const { level, topic, search, beautyMode } = query;
 
     // Thiết lập điều kiện tìm kiếm/lọc (tương đương Specification trong Spring Data JPA)
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -77,9 +77,18 @@ export class WordsService {
       where.level = level;
     }
 
-    if (topic && topic !== 'All') {
-      where.topic = topic;
+    if (beautyMode === 'true') {
+      if (topic && topic !== 'All') {
+        where.topic = topic;
+      } else {
+        where.topic = { in: ['Lashes', 'Hair', 'Beauty'] };
+      }
+    } else {
+      if (topic && topic !== 'All') {
+        where.topic = topic;
+      }
     }
+
 
     if (search && search.trim() !== '') {
       where.OR = [
@@ -385,6 +394,21 @@ Format your response strictly as a JSON object matching this schema:
       const validLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
       const level = validLevels.includes(aiResult.level) ? aiResult.level : 'B1';
 
+      // Tự động phân loại thông minh chuyên ngành Beauty / Lashes / Hair
+      let finalTopic = aiResult.topic || 'Daily Life';
+      const wordLower = normalizedWord.toLowerCase();
+      
+      const lashKeywords = ['lash', 'tweezers', 'glue', 'adhesive', 'eye', 'blink', 'retention', 'classic', 'volume', 'hybrid', 'remover', 'perm'];
+      const hairKeywords = ['hair', 'scalp', 'extension', 'weft', 'cut', 'style', 'blow', 'keratin', 'bleach', 'foil', 'trim', 'highlight', 'balayage'];
+
+      if (lashKeywords.some(key => wordLower.includes(key))) {
+        finalTopic = 'Lashes';
+      } else if (hairKeywords.some(key => wordLower.includes(key))) {
+        finalTopic = 'Hair';
+      } else if (finalTopic.toLowerCase().includes('beauty') || finalTopic.toLowerCase().includes('salon')) {
+        finalTopic = 'Beauty';
+      }
+
       // 4. Lưu vào database
       const newWord = await this.prisma.word.create({
         data: {
@@ -395,7 +419,7 @@ Format your response strictly as a JSON object matching this schema:
           exampleMeaning: aiResult.exampleMeaning || 'Đây là câu ví dụ.',
           partOfSpeech,
           level,
-          topic: aiResult.topic || 'Daily Life',
+          topic: finalTopic,
         },
       });
 
@@ -411,3 +435,4 @@ Format your response strictly as a JSON object matching this schema:
     }
   }
 }
+

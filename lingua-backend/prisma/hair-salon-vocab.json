@@ -498,5 +498,56 @@
     "level": "A2",
     "topic": "Beauty",
     "partOfSpeech": "Phrase"
+  },
+  {
+    "word": "hair extensions",
+    "ipa": "/her ɪkˈstenʃnz/",
+    "meaning": "nối tóc / các lọn tóc nối — bổ sung độ dài và độ dày cho tóc tự nhiên",
+    "example": "Are you looking for clip-in or semi-permanent hair extensions today?",
+    "exampleMeaning": "Hôm nay chị muốn nối tóc dạng kẹp phím hay nối bán vĩnh viễn ạ?",
+    "level": "A2",
+    "topic": "Hair",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "weft extensions",
+    "ipa": "/wɛft ɪkˈstenʃnz/",
+    "meaning": "nối tóc phím — lọn tóc được may dệt thành một dải dài để kẹp hoặc khâu lên đầu",
+    "example": "Weft extensions are great for adding maximum volume quickly.",
+    "exampleMeaning": "Nối tóc phím rất tuyệt để làm tăng độ dày tối đa cho tóc một cách nhanh chóng.",
+    "level": "B1",
+    "topic": "Hair",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "tape-in extensions",
+    "ipa": "/teɪp-ɪn ɪkˈstenʃnz/",
+    "meaning": "nối tóc dán — các tép tóc có sẵn keo dán mỏng dán ép sát chân tóc thật",
+    "example": "Tape-in extensions lie completely flat against the head for a seamless look.",
+    "exampleMeaning": "Nối tóc dán nằm ép sát da đầu nên nhìn hoàn toàn tự nhiên không lộ mối nối.",
+    "level": "B1",
+    "topic": "Hair",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "keratin bond",
+    "ipa": "/ˈkɛrətɪn bɑːnd/",
+    "meaning": "nối keo keratin / nối silicon — dùng nhiệt làm chảy mối keo gắn tép tóc nối vào tóc thật",
+    "example": "Keratin bond extensions can last up to four to five months with good care.",
+    "exampleMeaning": "Tóc nối keo keratin có thể chơi được bốn đến năm tháng nếu chăm sóc tốt.",
+    "level": "B2",
+    "topic": "Hair",
+    "partOfSpeech": "Noun"
+  },
+  {
+    "word": "hair density",
+    "ipa": "/her ˈdɛnsətɪ/",
+    "meaning": "mật độ tóc / độ dày mỏng của tóc — số lượng sợi tóc trên da đầu",
+    "example": "For fine hair density, we should choose lightweight extension methods.",
+    "exampleMeaning": "Với mật độ tóc mỏng, chúng ta nên chọn các phương pháp nối tóc siêu nhẹ.",
+    "level": "B2",
+    "topic": "Hair",
+    "partOfSpeech": "Noun"
   }
 ]
+

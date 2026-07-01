@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/store/useAuthStore";
 import { api } from "@/lib/api";
 import Sidebar from "@/components/Sidebar";
+import { useAppModeStore } from "@/store/useAppModeStore";
 
 interface Deck {
   topic: string;
@@ -14,6 +15,7 @@ interface Deck {
   dueWords: number;
 }
 
+
 export default function FlashcardsPage() {
   const router = useRouter();
   const { user, token, isAuthenticated, loadUser } = useAuthStore();
@@ -22,6 +24,7 @@ export default function FlashcardsPage() {
   const [activeTab, setActiveTab] = useState<"all" | "due" | "completed">("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedLevel, setSelectedLevel] = useState("all");
+  const { isBeautyMode } = useAppModeStore();
 
   // Load auth state
   useEffect(() => {
@@ -54,6 +57,15 @@ export default function FlashcardsPage() {
   // Map topic to emoji and description
   const getTopicMeta = (topic: string) => {
     const normalized = topic.toLowerCase();
+    if (normalized.includes("lashes")) {
+      return { emoji: "👁️", desc: "Eyelash extensions, diameters, tweezers, and lash maps." };
+    }
+    if (normalized.includes("hair")) {
+      return { emoji: "💇", desc: "Hair extensions, wefts, keratin bonds, tones, and shears." };
+    }
+    if (normalized.includes("beauty") || normalized.includes("làm đẹp")) {
+      return { emoji: "💅", desc: "General beauty salon service phrases and nail care." };
+    }
     if (normalized.includes("travel") || normalized.includes("du lịch")) {
       return { emoji: "🏖️", desc: "Airport, hotel, and sightseeing essentials." };
     }
@@ -91,13 +103,21 @@ export default function FlashcardsPage() {
 
   // Filter Decks
   const filteredDecks = decks.filter((deck) => {
-    // 1. Search Query Filter
+    // 1. Beauty Mode Filter
+    if (isBeautyMode) {
+      const topicLower = deck.topic.toLowerCase();
+      if (!["lashes", "hair", "beauty"].includes(topicLower)) {
+        return false;
+      }
+    }
+
+    // 2. Search Query Filter
     const matchesSearch = deck.topic.toLowerCase().includes(searchQuery.toLowerCase());
     
-    // 2. Level Filter
+    // 3. Level Filter
     const matchesLevel = selectedLevel === "all" || deck.level.toLowerCase() === selectedLevel.toLowerCase();
     
-    // 3. Tab Filter
+    // 4. Tab Filter
     let matchesTab = true;
     if (activeTab === "due") {
       matchesTab = deck.dueWords > 0;
@@ -107,6 +127,7 @@ export default function FlashcardsPage() {
 
     return matchesSearch && matchesLevel && matchesTab;
   });
+
 
   const dueDecksCount = decks.filter(d => d.dueWords > 0).length;
 

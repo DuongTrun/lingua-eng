@@ -10,6 +10,8 @@ import WordDetailModal, { DetailedWord } from "@/components/WordDetailModal";
 import PaginationControls from "@/components/PaginationControls";
 import AddWordModal from "@/components/AddWordModal";
 
+import { useAppModeStore } from "@/store/useAppModeStore";
+
 // ============================================================
 // 📖 Interfaces
 // ============================================================
@@ -26,7 +28,9 @@ interface PaginationMeta {
 const TOPIC_TRANSLATIONS: Record<string, string> = {
   All: "Tất cả",
   Art: "Nghệ thuật",
-  Beauty: "Làm đẹp",
+  Beauty: "Làm đẹp (Chung)",
+  Lashes: "Chuyên ngành Nối Mi",
+  Hair: "Chuyên ngành Tóc",
   Business: "Kinh doanh",
   "Daily Life": "Giao tiếp hàng ngày",
   Education: "Giáo dục",
@@ -42,6 +46,7 @@ const TOPIC_TRANSLATIONS: Record<string, string> = {
   Technology: "Công nghệ",
   Travel: "Du lịch",
 };
+
 
 const LEVELS = ["All", "A1", "A2", "B1", "B2", "C1", "C2"] as const;
 
@@ -69,6 +74,7 @@ export default function VocabularyLibraryPage() {
 
   // Danh sách chủ đề từ API (dynamic, fix C-1)
   const [topics, setTopics] = useState<string[]>([]);
+  const { isBeautyMode } = useAppModeStore();
 
   // States cho Dictionary Detail Modal
   const [selectedWordId, setSelectedWordId] = useState<string | null>(null);
@@ -143,8 +149,17 @@ export default function VocabularyLibraryPage() {
       params.append("page", currentPage.toString());
       params.append("limit", "18"); // Hiển thị 18 từ mỗi trang dạng lưới 3 cột
 
+      if (isBeautyMode) {
+        // Trong Beauty Mode, chỉ lấy các chủ đề Lashes, Hair, Beauty
+        params.append("beautyMode", "true");
+        if (topicFilter !== "All" && ["Lashes", "Hair", "Beauty"].includes(topicFilter)) {
+          params.append("topic", topicFilter);
+        }
+      } else {
+        if (topicFilter !== "All") params.append("topic", topicFilter);
+      }
+
       if (levelFilter !== "All") params.append("level", levelFilter);
-      if (topicFilter !== "All") params.append("topic", topicFilter);
       if (debouncedSearch.trim() !== "") params.append("search", debouncedSearch);
 
       const response = await api.get(`/words?${params.toString()}`);
@@ -155,7 +170,8 @@ export default function VocabularyLibraryPage() {
     } finally {
       setLoading(false);
     }
-  }, [isAuthenticated, token, currentPage, levelFilter, topicFilter, debouncedSearch]);
+  }, [isAuthenticated, token, currentPage, levelFilter, topicFilter, debouncedSearch, isBeautyMode]);
+
 
   useEffect(() => {
     fetchWords();
@@ -333,17 +349,20 @@ export default function VocabularyLibraryPage() {
                 className="w-full px-4 py-3 bg-surface border border-outline-variant/40 rounded-xl text-sm font-bold focus:outline-none focus:border-primary appearance-none cursor-pointer"
               >
                 <option value="All">Chủ đề: Tất cả</option>
-                {topics.map((topic) => (
-                  <option key={topic} value={topic}>
-                    {TOPIC_TRANSLATIONS[topic] || topic}
-                  </option>
-                ))}
+                {topics
+                  .filter((topic) => !isBeautyMode || ["Lashes", "Hair", "Beauty"].includes(topic))
+                  .map((topic) => (
+                    <option key={topic} value={topic}>
+                      {TOPIC_TRANSLATIONS[topic] || topic}
+                    </option>
+                  ))}
               </select>
               <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline pointer-events-none">
                 keyboard_arrow_down
               </span>
             </div>
           </div>
+
 
           {/* Row 2: Level Tabs */}
           <div>

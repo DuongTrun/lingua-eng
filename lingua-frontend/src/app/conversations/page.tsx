@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/store/useAuthStore";
 import { useConversationStore } from "@/store/useConversationStore";
 import Sidebar from "@/components/Sidebar";
+import { useAppModeStore } from "@/store/useAppModeStore";
 
 interface Scenario {
   id: string;
@@ -16,6 +17,7 @@ interface Scenario {
   bgGradient: string;
   radialColor: string;
 }
+
 
 const SCENARIOS: Scenario[] = [
   {
@@ -109,21 +111,21 @@ const SCENARIOS: Scenario[] = [
     radialColor: "from-purple-500/30",
   },
   {
-    id: "Nail Salon Consultation",
-    title: "Nail Salon Consultation",
-    emoji: "💅",
+    id: "Lash Salon Consultation",
+    title: "Eyelash Consultation",
+    emoji: "👁️",
     suggestedLevel: "A2-B2",
-    description: "Consult a client on nail service, shape (almond, square), and nail art design.",
+    description: "Consult a client on eyelash styles (classic, volume, hybrid), lengths and curls.",
     duration: "~10 min",
     bgGradient: "from-rose-50 to-pink-50",
     radialColor: "from-rose-500/30",
   },
   {
-    id: "Hair Salon Consultation",
-    title: "Hair Salon Consultation",
+    id: "Hair Extensions Consultation",
+    title: "Hair Extensions Consultation",
     emoji: "💇",
     suggestedLevel: "A2-B2",
-    description: "Discuss hair cuts (trim, layers, bangs), colors (highlights, balayage), and styling.",
+    description: "Discuss hair extensions (weft, tape-in, keratin bond), lengths, and density.",
     duration: "~10 min",
     bgGradient: "from-emerald-50 to-teal-50",
     radialColor: "from-teal-500/30",
@@ -153,10 +155,12 @@ export default function ConversationsPage() {
   const router = useRouter();
   const { user, isAuthenticated, loadUser } = useAuthStore();
   const { startSession, isLoading, error, setError } = useConversationStore();
+  const { isBeautyMode } = useAppModeStore();
 
   const [selectedScenario, setSelectedScenario] = useState<Scenario | null>(null);
   const [selectedLevel, setSelectedLevel] = useState<string>("B1");
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+
 
   // Authenticate user
   useEffect(() => {
@@ -230,11 +234,17 @@ export default function ConversationsPage() {
 
         {/* Scenarios Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-unit-lg">
-          {SCENARIOS.map((scenario) => (
+          {SCENARIOS.filter(s => {
+            if (isBeautyMode) {
+              return ["Lash Salon Consultation", "Hair Extensions Consultation", "Salon Small Talk & Checkout"].includes(s.id);
+            }
+            return true;
+          }).map((scenario) => (
             <div 
               key={scenario.id} 
               className="bg-surface-container-lowest rounded-[16px] border border-outline-variant/20 overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-md transition-all duration-300 group"
             >
+
               <div className={`h-40 bg-gradient-to-br ${scenario.bgGradient} flex items-center justify-center border-b border-outline-variant/10 relative overflow-hidden`}>
                 <div className={`absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] ${scenario.radialColor} to-transparent mix-blend-overlay`}></div>
                 <span className="text-[80px] group-hover:scale-110 transition-transform duration-500 drop-shadow-sm select-none">

@@ -3,15 +3,17 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/store/useAuthStore";
+import { useAppModeStore } from "@/store/useAppModeStore";
 
 interface SidebarProps {
-  activeItem: "dashboard" | "flashcards" | "vocabulary" | "exercises" | "conversations" | "shadowing" | "leaderboard" | "settings" | "admin-users" | "word-sorter";
+  activeItem: "dashboard" | "flashcards" | "vocabulary" | "exercises" | "conversations" | "shadowing" | "leaderboard" | "settings" | "admin-users" | "word-sorter" | "grammar";
   showMobileHeader?: boolean;
 }
 
 export default function Sidebar({ activeItem, showMobileHeader = true }: SidebarProps) {
   const router = useRouter();
   const { user, logout } = useAuthStore();
+  const { isBeautyMode, toggleBeautyMode } = useAppModeStore();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleLogout = () => {
@@ -35,9 +37,15 @@ export default function Sidebar({ activeItem, showMobileHeader = true }: Sidebar
       href: "/flashcards",
     },
     {
+      id: "grammar",
+      label: "Cấu trúc Ngữ pháp",
+      icon: "menu_book",
+      href: "/grammar",
+    },
+    {
       id: "vocabulary",
       label: "Thư viện Từ vựng",
-      icon: "menu_book",
+      icon: "library_books",
       href: "/vocabulary",
     },
     {
@@ -123,7 +131,7 @@ export default function Sidebar({ activeItem, showMobileHeader = true }: Sidebar
       <aside className={`bg-surface border-r border-outline-variant/30 flex flex-col justify-between p-6 z-50 fixed inset-y-0 left-0 w-72 transform transition-transform duration-300 ease-in-out md:translate-x-0 md:w-sidebar-width md:h-screen md:fixed md:left-0 md:top-0
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}>
-        <div className="space-y-8">
+        <div className="space-y-6">
           {/* Logo & Close Button */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-headline-md font-extrabold text-primary select-none text-xl">
@@ -140,6 +148,28 @@ export default function Sidebar({ activeItem, showMobileHeader = true }: Sidebar
             >
               <span className="material-symbols-outlined text-lg">close</span>
             </button>
+          </div>
+
+          {/* 💅 Beauty Salon Mode Switcher */}
+          <div className="p-4 rounded-2xl bg-amber-500/5 border border-amber-500/20 flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined text-amber-600 font-bold">content_cut</span>
+                <span className="text-sm font-bold text-amber-900">Beauty Salon Mode</span>
+              </div>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={isBeautyMode}
+                  onChange={toggleBeautyMode}
+                  className="sr-only peer"
+                />
+                <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
+              </label>
+            </div>
+            <p className="text-xs text-amber-800/80 leading-relaxed">
+              Bật chế độ chỉ học từ vựng và hội thoại chuyên ngành **Làm Mi & Tóc**.
+            </p>
           </div>
 
           {/* Navigation Links */}
@@ -169,6 +199,31 @@ export default function Sidebar({ activeItem, showMobileHeader = true }: Sidebar
             })}
           </nav>
         </div>
+
+        {/* User Card & Logout */}
+        <div className="pt-6 border-t border-outline-variant/30 flex flex-col gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center text-sm uppercase">
+              {user.name.charAt(0)}
+            </div>
+            <div className="overflow-hidden">
+              <p className="font-bold text-sm truncate">{user.name}</p>
+              <p className="text-xs text-on-surface-variant truncate">{user.email}</p>
+            </div>
+          </div>
+          <button
+            onClick={handleLogout}
+            className="w-full py-2.5 px-4 bg-error/10 hover:bg-error/20 text-error font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2"
+          >
+            <span className="material-symbols-outlined text-lg">logout</span>
+            Đăng xuất
+          </button>
+        </div>
+      </aside>
+    </>
+  );
+}
+
 
         {/* User Card & Logout */}
         <div className="pt-6 border-t border-outline-variant/30 flex flex-col gap-4">

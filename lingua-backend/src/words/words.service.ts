@@ -295,4 +295,119 @@ Format your response strictly as a JSON object matching this schema:
       };
     }
   }
+
+  /**
+   * ➕ Thêm từ vựng thủ công — AI Gemini tự động sinh thông tin đầy đủ
+   * 
+   * Luồng:
+   * 1. Chuẩn hóa từ input (trim, lowercase)
+   * 2. Kiểm tra từ đã tồn tại trong DB chưa
+   * 3. Nếu có → trả về từ đó kèm flag existed: true
+   * 4. Nếu chưa → gọi Gemini sinh IPA, meaning, example, partOfSpeech, level, topic
+   * 5. Lưu vào DB và trả về
+   */
+  async addCustomWord(wordInput: string) {
+    // 1. Chuẩn hóa từ input
+    const normalizedWord = wordInput.trim().toLowerCase();
+
+    // 2. Kiểm tra từ đã tồn tại trong DB chưa
+    const existingWord = await this.prisma.word.findUnique({
+      where: { word: normalizedWord },
+    });
+
+    if (existingWord) {
+      return {
+        existed: true,
+        word: existingWord,
+      };
+    }
+
+    // 3. Gọi Gemini AI để sinh thông tin đầy đủ cho từ vựng
+    const sanitizedWord = normalizedWord.replace(/[^a-zA-Z0-9\s\-']/g, '').trim();
+
+    const prompt = `You are a professional English-Vietnamese bilingual lexicographer.
+Generate complete dictionary information for the English word: "${sanitizedWord}".
+
+Provide ALL of the following fields:
+1. ipa: IPA phonetic transcription (e.g., "/ˌserənˈdɪpɪti/")
+2. meaning: Vietnamese translation/meaning (concise, 1-2 words or short phrase, e.g., "sự tình cờ may mắn")
+3. example: One natural English example sentence using this word
+4. exampleMeaning: Vietnamese translation of the example sentence
+5. partOfSpeech: One of "Noun", "Verb", "Adjective", "Adverb", "Preposition", "Conjunction", "Pronoun", "Interjection"
+6. level: Estimated CEFR level, one of "A1", "A2", "B1", "B2", "C1", "C2"
+7. topic: Best matching topic category, one of "Daily Life", "Travel", "Business", "Food", "Health", "Education", "Technology", "Entertainment", "Sports", "Nature", "Science", "Art", "Shopping", "Family", "Socializing", "Beauty"
+
+Format your response strictly as a JSON object matching this schema:
+{
+  "ipa": "string",
+  "meaning": "string",
+  "example": "string",
+  "exampleMeaning": "string",
+  "partOfSpeech": "string",
+  "level": "string",
+  "topic": "string"
+}`;
+
+    try {
+      const response = await this.ai.models.generateContent({
+        model: 'gemini-3.1-flash-lite',
+        contents: prompt,
+        config: {
+          responseMimeType: 'application/json',
+          responseSchema: {
+            type: 'OBJECT',
+            properties: {
+              ipa: { type: 'STRING' },
+              meaning: { type: 'STRING' },
+              example: { type: 'STRING' },
+              exampleMeaning: { type: 'STRING' },
+              partOfSpeech: { type: 'STRING' },
+              level: { type: 'STRING' },
+              topic: { type: 'STRING' },
+            },
+            required: ['ipa', 'meaning', 'example', 'exampleMeaning', 'partOfSpeech', 'level', 'topic'],
+          },
+        },
+      });
+
+      const responseText = response.text;
+      if (!responseText) {
+        throw new Error('Không nhận được phản hồi từ Gemini AI!');
+      }
+
+      const aiResult = JSON.parse(responseText);
+
+      // Validate partOfSpeech
+      const validPOS = ['Noun', 'Verb', 'Adjective', 'Adverb', 'Preposition', 'Conjunction', 'Pronoun', 'Interjection'];
+      const partOfSpeech = validPOS.includes(aiResult.partOfSpeech) ? aiResult.partOfSpeech : 'Noun';
+
+      // Validate level
+      const validLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+      const level = validLevels.includes(aiResult.level) ? aiResult.level : 'B1';
+
+      // 4. Lưu vào database
+      const newWord = await this.prisma.word.create({
+        data: {
+          word: normalizedWord,
+          ipa: aiResult.ipa || `/${normalizedWord}/`,
+          meaning: aiResult.meaning || 'Chưa có nghĩa',
+          example: aiResult.example || `This is an example with ${normalizedWord}.`,
+          exampleMeaning: aiResult.exampleMeaning || 'Đây là câu ví dụ.',
+          partOfSpeech,
+          level,
+          topic: aiResult.topic || 'Daily Life',
+        },
+      });
+
+      return {
+        existed: false,
+        word: newWord,
+      };
+    } catch (error) {
+      this.logger.error(`Lỗi khi thêm từ vựng "${normalizedWord}" bằng Gemini:`, error);
+      throw new Error(
+        `Không thể sinh thông tin cho từ "${normalizedWord}". Vui lòng kiểm tra lại từ vựng hoặc thử lại sau!`,
+      );
+    }
+  }
 }

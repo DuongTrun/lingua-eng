@@ -1,8 +1,9 @@
-import { Controller, Get, Query, UseGuards, Param, ParseUUIDPipe, BadRequestException } from '@nestjs/common';
+import { Controller, Get, Post, Query, Body, UseGuards, Param, ParseUUIDPipe, BadRequestException } from '@nestjs/common';
 import { Throttle } from '@nestjs/throttler';
 import { WordsService } from './words.service';
 import { AuthGuard } from '../auth/auth.guard';
 import { GetWordsQueryDto } from './dto/get-words-query.dto';
+import { AddCustomWordDto } from './dto/add-custom-word.dto';
 
 /**
  * 🌐 LINGUA-ENG — Words Controller
@@ -73,5 +74,17 @@ export class WordsController {
     })) id: string,
   ) {
     return this.wordsService.getWordDetails(id);
+  }
+
+  /**
+   * ➕ POST: /words/add-custom
+   * Thêm từ vựng thủ công — AI Gemini tự động sinh IPA, nghĩa, ví dụ, loại từ
+   *
+   * @Throttle: Giới hạn 5 request/phút vì mỗi request gọi Gemini API tốn tài nguyên
+   */
+  @Post('add-custom')
+  @Throttle({ default: { limit: 5, ttl: 60000 } })
+  async addCustomWord(@Body() dto: AddCustomWordDto) {
+    return this.wordsService.addCustomWord(dto.word);
   }
 }

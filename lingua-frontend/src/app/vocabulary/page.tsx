@@ -8,6 +8,7 @@ import Sidebar from "@/components/Sidebar";
 import WordCard, { Word } from "@/components/WordCard";
 import WordDetailModal, { DetailedWord } from "@/components/WordDetailModal";
 import PaginationControls from "@/components/PaginationControls";
+import AddWordModal from "@/components/AddWordModal";
 
 // ============================================================
 // 📖 Interfaces
@@ -76,6 +77,9 @@ export default function VocabularyLibraryPage() {
   const [modalLanguage, setModalLanguage] = useState<"en" | "vi">("en");
   const [flashcardAdded, setFlashcardAdded] = useState(false);
   const [addingFlashcard, setAddingFlashcard] = useState(false);
+
+  // State cho AddWordModal
+  const [showAddModal, setShowAddModal] = useState(false);
 
   // Ref cho debounce timer
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -277,9 +281,18 @@ export default function VocabularyLibraryPage() {
               Tra cứu và củng cố phát âm toàn bộ 1,500 từ vựng Oxford cốt lõi theo cấp độ và chủ đề.
             </p>
           </div>
-          <div className="bg-secondary/10 text-secondary text-xs font-extrabold px-4 py-2.5 rounded-2xl flex items-center gap-1.5 shrink-0 self-start sm:self-center">
-            <span className="material-symbols-outlined text-sm leading-none">menu_book</span>
-            Tổng số: {meta.totalItems} từ
+          <div className="flex items-center gap-3 shrink-0 self-start sm:self-center">
+            <button
+              onClick={() => setShowAddModal(true)}
+              className="bg-primary text-pure-white text-xs font-extrabold px-4 py-2.5 rounded-2xl flex items-center gap-1.5 hover:bg-primary/90 transition-all cursor-pointer"
+            >
+              <span className="material-symbols-outlined text-sm leading-none" style={{ fontVariationSettings: "'FILL' 1" }}>add_circle</span>
+              Thêm từ mới
+            </button>
+            <div className="bg-secondary/10 text-secondary text-xs font-extrabold px-4 py-2.5 rounded-2xl flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-sm leading-none">menu_book</span>
+              Tổng số: {meta.totalItems} từ
+            </div>
           </div>
         </header>
 
@@ -419,6 +432,14 @@ export default function VocabularyLibraryPage() {
           onSearchSynonym={handleSearchSynonym}
           onSpeakWord={speakWord}
           onNavigateToSpeaking={handleNavigateToSpeaking}
+        />
+      )}
+
+      {/* Add Word Modal */}
+      {showAddModal && (
+        <AddWordModal
+          onClose={() => setShowAddModal(false)}
+          onWordAdded={() => fetchWords()}
         />
       )}
     </div>

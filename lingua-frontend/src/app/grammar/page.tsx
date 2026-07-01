@@ -159,8 +159,173 @@ const BEAUTY_GRAMMARS: GrammarStructure[] = [
     exampleResponse: "We're going to visit family in Florida for a week.",
     exampleTranslation: "Chị có kế hoạch gì đặc biệt cho kỳ nghỉ sắp tới không? Có đi du lịch đâu không ạ?",
     category: "Checkout"
+  },
+  // Nhóm mới bổ sung cho đủ 30 cấu trúc
+  // Nối mi - Lashes (Tiếp tục)
+  {
+    id: "g15",
+    pattern: "Your natural lashes are a bit weak, so we should use a lighter thickness.",
+    vietnameseMeaning: "Mi thật của chị hơi yếu, nên chúng ta nên dùng độ dày mỏng nhẹ hơn.",
+    usageContext: "Tư vấn độ dày mi để bảo vệ mi thật không bị gãy rụng.",
+    exampleStyle: "Your natural lashes are a bit weak, so we should use a point zero five thickness for the volume set.",
+    exampleResponse: "That makes sense. I don't want to damage my real lashes.",
+    exampleTranslation: "Mi thật của chị hơi yếu, nên chúng ta nên dùng độ dày 0.05 cho bộ mi volume nhé.",
+    category: "Lashes"
+  },
+  {
+    id: "g16",
+    pattern: "Please try to keep your eyes completely closed and relaxed.",
+    vietnameseMeaning: "Chị vui lòng cố gắng nhắm mắt hoàn toàn và thả lỏng nhé.",
+    usageContext: "Dặn khách nhắm mắt và thư giãn trong lúc dán gel pad hoặc đang nối mi.",
+    exampleStyle: "Please try to keep your eyes completely closed and relaxed during the application.",
+    exampleResponse: "Sure, I'll probably fall asleep anyway.",
+    exampleTranslation: "Chị vui lòng cố gắng nhắm mắt hoàn toàn và thả lỏng trong suốt quá trình nối mi nhé.",
+    category: "Lashes"
+  },
+  {
+    id: "g17",
+    pattern: "I need to clean your lashes with a lash shampoo to remove dirt and oils.",
+    vietnameseMeaning: "Em cần vệ sinh mi của chị bằng bọt rửa mi để loại bỏ bụi bẩn và dầu nhờn.",
+    usageContext: "Chuẩn bị mi (prep) trước khi tiến hành nối.",
+    exampleStyle: "I need to clean your lashes first with a lash shampoo to ensure the glue bonds properly.",
+    exampleResponse: "Go ahead, my eyes feel a bit oily today.",
+    exampleTranslation: "Em cần vệ sinh mi của chị trước bằng bọt rửa mi để đảm bảo keo bám tốt nhất.",
+    category: "Lashes"
+  },
+  {
+    id: "g18",
+    pattern: "Do you want a full set or just a fill today?",
+    vietnameseMeaning: "Hôm nay chị muốn nối mới cả bộ hay chỉ dặm mi thôi ạ?",
+    usageContext: "Xác định gói dịch vụ nối mi khách yêu cầu.",
+    exampleStyle: "Do you want a full set of hybrid lashes or just a fill today?",
+    exampleResponse: "I need a full set because most of my old lashes fell out.",
+    exampleTranslation: "Hôm nay chị muốn nối mới cả bộ mi hybrid hay chỉ dặm lại thôi ạ?",
+    category: "Lashes"
+  },
+  {
+    id: "g19",
+    pattern: "It is normal to lose about two to five natural lashes per day.",
+    vietnameseMeaning: "Việc rụng khoảng 2 đến 5 sợi mi thật mỗi ngày là hoàn toàn bình thường.",
+    usageContext: "Giải thích chu kỳ rụng mi tự nhiên khi khách thắc mắc mi nối nhanh rụng.",
+    exampleStyle: "It is completely normal to lose about two to five natural lashes per day due to the growth cycle.",
+    exampleResponse: "Oh, I see. I was worried I was doing something wrong.",
+    exampleTranslation: "Việc rụng khoảng 2 đến 5 sợi mi thật mỗi ngày là hoàn toàn bình thường do chu kỳ phát triển của tóc/mi.",
+    category: "Lashes"
+  },
+  {
+    id: "g20",
+    pattern: "Do not use any oil-based makeup removers around your eyes.",
+    vietnameseMeaning: "Đừng sử dụng bất kỳ nước tẩy trang dạng dầu nào quanh vùng mắt nhé.",
+    usageContext: "Dặn dò aftercare phòng tránh bong keo nối mi.",
+    exampleStyle: "To keep the glue strong, do not use any oil-based makeup removers around your eyes.",
+    exampleResponse: "Okay, I'll switch to micellar water.",
+    exampleTranslation: "Để giữ mối keo bền, chị đừng sử dụng bất kỳ nước tẩy trang dạng dầu nào quanh vùng mắt nhé.",
+    category: "Lashes"
+  },
+  // Nối tóc - Hair (Tiếp tục)
+  {
+    id: "g21",
+    pattern: "We need to install the extensions in sections for a seamless blend.",
+    vietnameseMeaning: "Chúng ta cần chia tóc thành từng lớp để nối giúp tóc tiệp tự nhiên nhất.",
+    usageContext: "Giải thích quy trình chia phân khu tóc nối.",
+    exampleStyle: "We need to install the extensions in neat sections for a seamless blend with your hair.",
+    exampleResponse: "Take your time, I want it to look natural.",
+    exampleTranslation: "Chúng ta cần đi các tép nối theo từng phân khu gọn gàng để tóc nối tiệp tự nhiên với tóc thật.",
+    category: "Hair"
+  },
+  {
+    id: "g22",
+    pattern: "You should brush your hair extensions starting from the ends and moving up.",
+    vietnameseMeaning: "Chị nên chải tóc nối bắt đầu từ ngọn tóc rồi mới chải dần lên trên chân tóc.",
+    usageContext: "Hướng dẫn khách chải tóc nối tránh đứt rụng.",
+    exampleStyle: "You should always brush your hair extensions starting from the ends and slowly moving up to the roots.",
+    exampleResponse: "Thanks for the tip, I usually brush from the top down.",
+    exampleTranslation: "Chị nên chải tóc nối bắt đầu từ ngọn tóc rồi mới chải dần lên trên sát chân tóc nhé.",
+    category: "Hair"
+  },
+  {
+    id: "g23",
+    pattern: "We recommend coming in for maintenance every six to eight weeks.",
+    vietnameseMeaning: "Em khuyên nên quay lại tiệm để nâng mối nối sau mỗi 6 đến 8 tuần.",
+    usageContext: "Tư vấn chu kỳ bảo dưỡng, nâng mối nối tóc phím/dán/keo.",
+    exampleStyle: "To prevent tangling, we recommend coming in for maintenance every six to eight weeks.",
+    exampleResponse: "I'll make sure to book that in advance.",
+    exampleTranslation: "Để tránh tóc bị rối cục, em khuyên nên quay lại nâng mối nối sau mỗi 6 đến 8 tuần nhé.",
+    category: "Hair"
+  },
+  {
+    id: "g24",
+    pattern: "Avoid applying conditioner directly onto the bonds or tapes.",
+    vietnameseMeaning: "Tránh bôi dầu xả trực tiếp lên các mối keo hoặc miếng dán tóc nối.",
+    usageContext: "Lưu ý khách khi gội đầu dưỡng tại nhà.",
+    exampleStyle: "Avoid applying conditioner directly onto the bonds or tapes, as it can cause them to slip.",
+    exampleResponse: "Got it, only apply from the mid-shaft down.",
+    exampleTranslation: "Tránh bôi dầu xả trực tiếp lên các mối keo hoặc miếng dán, vì nó có thể làm tuột mối nối.",
+    category: "Hair"
+  },
+  {
+    id: "g25",
+    pattern: "We should use a sulfate-free shampoo to protect the extension hair.",
+    vietnameseMeaning: "Chúng ta nên dùng dầu gội không chứa sulfate để bảo vệ chất tóc nối.",
+    usageContext: "Khuyên khách sử dụng dòng sản phẩm gội xả chuyên biệt.",
+    exampleStyle: "We should use a sulfate-free shampoo to keep the extension hair from drying out.",
+    exampleResponse: "Do you sell that shampoo here in the salon?",
+    exampleTranslation: "Chúng ta nên dùng dầu gội không chứa sulfate để giữ cho tóc nối không bị khô xơ.",
+    category: "Hair"
+  },
+  {
+    id: "g26",
+    pattern: "Would you like me to style it with beach waves or keep it straight?",
+    vietnameseMeaning: "Chị muốn em làm xoăn sóng nước nhẹ hay để thẳng tự nhiên ạ?",
+    usageContext: "Hỏi sở thích tạo kiểu tóc sau khi nối xong.",
+    exampleStyle: "Would you like me to style it with beach waves today or keep it straight?",
+    exampleResponse: "I'd love some beach waves for my dinner party tonight.",
+    exampleTranslation: "Hôm nay chị muốn em uốn tạo kiểu xoăn sóng nước nhẹ hay để thẳng tự nhiên ạ?",
+    category: "Hair"
+  },
+  // Giao tiếp / Checkout (Tiếp tục)
+  {
+    id: "g27",
+    pattern: "We accept payments through Venmo, Zelle, cash, or credit card.",
+    vietnameseMeaning: "Tiệm em nhận thanh toán qua Venmo, Zelle, tiền mặt hoặc thẻ tín dụng.",
+    usageContext: "Liệt kê các kênh thanh toán khi khách chuẩn bị checkout.",
+    exampleStyle: "We accept payments through Venmo, Zelle, cash, or credit card. Which is easiest for you?",
+    exampleResponse: "I'll do Zelle, it's very convenient.",
+    exampleTranslation: "Tiệm em nhận thanh toán qua Venmo, Zelle, tiền mặt hoặc thẻ tín dụng. Cái nào tiện nhất cho chị?",
+    category: "Checkout"
+  },
+  {
+    id: "g28",
+    pattern: "Here is your receipt. Have a wonderful rest of your day!",
+    vietnameseMeaning: "Đây là hóa đơn của chị ạ. Chúc chị một ngày tốt lành nhé!",
+    usageContext: "Đưa biên lai thanh toán và chúc khách hàng khi kết thúc.",
+    exampleStyle: "Here is your receipt. Thank you so much, and have a wonderful rest of your day!",
+    exampleResponse: "Thank you, you too! See you next time.",
+    exampleTranslation: "Đây là hóa đơn của chị ạ. Cảm ơn chị rất nhiều và chúc chị có những giờ còn lại trong ngày thật tốt lành nhé!",
+    category: "Checkout"
+  },
+  {
+    id: "g29",
+    pattern: "How was your experience today? Did everything meet your expectations?",
+    vietnameseMeaning: "Trải nghiệm hôm nay của chị thế nào ạ? Mọi thứ có đúng như kỳ vọng không ạ?",
+    usageContext: "Kiểm tra chất lượng dịch vụ và độ hài lòng tổng quát của khách.",
+    exampleStyle: "How was your experience today? Did everything meet your expectations?",
+    exampleResponse: "Yes, absolutely. The salon is so clean and you did a great job.",
+    exampleTranslation: "Trải nghiệm hôm nay của chị thế nào ạ? Mọi thứ có đúng như kỳ vọng của chị không?",
+    category: "Checkout"
+  },
+  {
+    id: "g30",
+    pattern: "Is this your first time getting professional extensions?",
+    vietnameseMeaning: "Đây là lần đầu tiên chị nối mi/nối tóc chuyên nghiệp phải không ạ?",
+    usageContext: "Small talk hỏi thăm lịch sử làm đẹp của khách hàng để tư vấn sâu.",
+    exampleStyle: "Is this your first time getting professional extensions, or have you had them before?",
+    exampleResponse: "I had them once last year, but I wanted to try a different style this time.",
+    exampleTranslation: "Đây là lần đầu tiên chị đi nối mi/tóc chuyên nghiệp phải không ạ, hay chị đã từng nối trước đây rồi?",
+    category: "Checkout"
   }
 ];
+
 
 
 export default function GrammarPage() {

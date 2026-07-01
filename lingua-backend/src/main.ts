@@ -7,9 +7,28 @@ import 'dotenv/config';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Cấu hình CORS để cho phép Frontend truy cập API
+  // Cấu hình CORS để cho phép Frontend truy cập API (cả production và local)
+  const allowedOrigins = [
+    'http://localhost:3000',
+    'http://localhost:5173',
+  ];
+  if (process.env.FRONTEND_URL) {
+    allowedOrigins.push(process.env.FRONTEND_URL);
+    // Tự động thêm bản không có dấu gạch chéo '/' ở cuối nếu người dùng cấu hình thừa
+    if (process.env.FRONTEND_URL.endsWith('/')) {
+      allowedOrigins.push(process.env.FRONTEND_URL.slice(0, -1));
+    }
+  }
+
   app.enableCors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: (origin, callback) => {
+      // Cho phép request không có origin (như Postman/Mobile) hoặc nằm trong danh sách được phép
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error(`Tên miền ${origin} không được phép truy cập API do chính sách CORS.`));
+      }
+    },
     credentials: true,
   });
 
